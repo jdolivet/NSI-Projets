@@ -1,0 +1,196 @@
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.cabecalho{
+    width: 100%;
+    text-align: center;
+    padding: 1%;
+    box-shadow: 0em 0 0.4em rgb(114, 114, 114);
+}
+
+.menu_lateral{
+    padding: 2%;
+    width: 19%;
+    
+    display: inline-block;
+    height: 100%;
+
+    
+}
+
+
+
+
+.menu_lateral p{
+    font-weight: 600;
+    color: #949494;
+    padding: 0% 5%;
+    
+}
+.menu_lateral ul{
+    padding: 0%;
+    margin: 0;
+    padding-bottom: 30%;
+}
+
+.menu_lateral li{
+    list-style: none;
+    padding: 2%;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.menu_lateral li:hover{
+    list-style: none;
+    background-color: #f3f3f3;
+}
+
+.menu_lateral a{
+    color: black;
+    width: 100%;
+    padding: 2% 5%;
+    text-decoration: none;
+}
+
+.menu_lateral a:hover{
+    color: black;
+}
+
+
+
+.conteudo{
+    border-left: 1px solid rgb(185, 185, 185);
+    display: inline-block;
+    vertical-align: top;
+    width: 80%;
+    
+}
+
+.conteudo hr{
+    width: 80%;    
+    margin-left: 5%;
+}
+
+.titulo{
+    margin: 5%;
+}
+
+.content{
+    width: 46%;
+    padding: 3% 5%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content img{
+    margin-bottom: 5%;
+}
+
+.content a{
+    text-decoration: none;
+}
+
+
+
+.sobre{
+    background-color: #f8f8f8;
+
+    margin: 3% 0%;
+    padding: 10% 5%;
+}
+
+
+.temas{
+    margin: 3% 5%;
+    padding: 10% 0%;
+}
+
+.temas p{
+    display: inline-block;
+    padding: 1% 2%;
+    background-color: blanchedalmond;
+
+}
+
+.temas h6{
+    font-weight: 400;
+    margin: 3% 0%;
+}
+
+
+.rodape{
+    padding: 5% 5%;
+    box-shadow: 0em 0 0.5em rgba(114, 114, 114, 0.301);
+}
+
+.rodape li{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    margin-right: 3%;
+
+}
+
+.rodape ul{
+    padding-left: 0%;
+    margin-left: 0%;
+    list-style: none;
+}
+
+
+
+.form_contato{
+    padding: 5% 5%;
+}
+
+.form_contato input{
+    margin-bottom: 3%;
+}
+
+.form_contato button{
+    margin-top: 3%;
+}
+
+a:link {text-decoration: none;}
+
+
+.info{
+    padding: 0% 5%;
+    padding-top: 3%;
+    font-weight: 600;
+    color: #949494;
+}
+
+
+
+.solo{
+    width: 100%;
+    padding: 3% 5%;
+    display: inline-block;
+}
+
+.solo img{
+    margin-bottom: 10%;
+    display: inline-block;
+
+}
+
+.solo h3{
+    display: inline-block;
+    padding-left: 5%;
+}
+
+
+
+.solo a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+table{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

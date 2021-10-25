@@ -1,0 +1,9 @@
+allemagne, autriche, belgique
+bulgarie, chypre, croatie
+danemark, espagne, estonie
+finlande, france, grece
+hongrie, irlande, italie
+lettonie, lituanie, luxembourg
+malte, holande, pologne
+portugal, roumanie, slovaquie
+slovenie, suede, russie
