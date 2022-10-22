@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0;
+  padding: 0;
+}
+.menu {
+  width: 860px;
+  margin: 0 auto;
+}
+.menu ul {
+  list-style: none;
+  margin-top: 2%;
+}
+.menu ul li {
+  background: #262626;
+  width: 170px;
+  border: 1px solid #262626;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  float: left;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+  font-family: big john;
+}
+.menu ul li:hover {
+  background: crimson;
+}
+.menu ul ul {
+  display: none;
+}
+body {
+  font-family: "cherry-cream-soda"
+}
+.titre {
+  text-align: center;
+  font-family: "serif"
+}
+.title {
+  font-family: Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, sans-serif;
+}
+.paragraphe {
+  font-family: big john;
+}
+h2 {
+  color: #676767
+}
+.centre {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

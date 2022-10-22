@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;;
+  font-size: 20px;
+  line-height: 20px;
+  color: #008000;
+  background-color: #000000;
+}
