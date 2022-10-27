@@ -1,0 +1,91 @@
+# Barre d'utilié
+MDBoxLayout:
+    orientation: 'vertical'
+    MDTopAppBar:
+        title: 'Générateur de Mot de Passe'
+
+    MDFloatLayout:
+
+# Majuscules
+        MDCheckbox:
+            id: box_majuscules
+            size_hint: None, None
+            size: "48dp", "48dp"
+            pos_hint: {'center_x': .1, 'center_y': .85}
+            active: True # Quand l'application est éxécuter, la case est déjà activer
+            # En cas de changement de status de la case, elle appele la fonction box_majuscules_desctiver()
+            on_active: app.box_majuscules_desactiver()
+
+        MDLabel:
+            text: 'Majuscules'
+            pos: 115, 327
+            font_size: 40
+
+# Minuscules
+        MDCheckbox:
+            id: box_minuscules
+            size_hint: None, None
+            size: "48dp", "48dp"
+            pos_hint: {'center_x': .6, 'center_y': .85}
+            active: True
+            # En cas de changement de status de la case, elle appele la fonction box_minuscules_desctiver()
+            on_active: app.box_minuscules_desactiver()
+
+
+        MDLabel:
+            text: 'Minuscules'
+            pos: 475, 327
+            font_size: 40
+
+# Chiffres
+        MDCheckbox:
+            id: box_chiffres
+            size_hint: None, None
+            size: "48dp", "48dp"
+            pos_hint: {'center_x': .1, 'center_y': .7}
+            active: True
+            # En cas de changement de status de la case, elle appele la fonction box_chiffres_desctiver()
+            on_active: app.box_chiffres_desactiver()
+
+        MDLabel:
+            text: 'Chiffres'
+            pos: 115, 185
+            font_size: 40
+
+# Caracteres Speciaux
+        MDCheckbox:
+            id: box_caractere_speciaux
+            size_hint: None, None
+            size: "48dp", "48dp"
+            pos_hint: {'center_x': .6, 'center_y': .7}
+            active: True
+            # En cas de changement de status de la case, elle appele la fonction box_caractere_speciaux_desctiver()
+            on_active: app.box_caractere_speciaux_desactiver()
+
+        MDLabel:
+            text: 'Caractères\nSpeciaux'
+            pos: 475, 185
+            font_size: 40
+
+# Taille du Mot de Passe
+        MDTextField:
+            id: taille
+            hint_text: 'Taille (min. 5):'
+            text: '8'
+            required: True # Signale à l'utilisateur, que le champ de text doit obligatoirement conternir une info
+            helper_text_mode: 'persistent' # Permet au texte en dessous du texte, reste de maniere permanente
+            helper_text: 'Min. Recommandé: 8'
+            pos_hint: {'center_x': .5, 'center_y': .55}
+            size_hint_x: 0.5
+
+# Bouton Generer
+        MDRaisedButton:
+            id: bouton_generer
+            text: 'Générer'
+            size_hint_x: 0.6
+            pos_hint: {'center_x': .5, 'center_y': .37}
+            # après avoir appuyé et relâché le bouton, il éxécute les fontions suivantes
+            on_release:
+                app.generer_mdp()
+                app.verifie_mdp(taille.text)
+
