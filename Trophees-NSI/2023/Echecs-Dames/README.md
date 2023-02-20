@@ -1,11 +1,11 @@
-# 270 Echecs et Dames
+# Echecs et Dames
 
-Nous avons développé un jeu grâce au module [pyxel](https://github.com/kitao/pyxel/blob/main/docs/README.fr.md), permettant de jouer aux échecs et aux dames.  
+Nous avons développé un jeu grâce au module [pyxel](https://github.com/kitao/pyxel/blob/main/docs/README.fr.md), permettant de jouer, à deux joueurs, aux échecs et aux dames.  
 Ils se jouent dans un tableau à deux dimensions (ou matrice) appelé échiquier.  
 
 Dans notre jeu, les pièces roses commencent, c’est l’équivalent des pièces blanches dans le jeu d’échecs traditionnel.  
 
-Pour commencer, il faut cliquer sur le jeu auquel on souhaite jouer (Echecs ou Dames).
+Chacun des deux joueurs jouent alternativement.
 
 Pour jouer, on sélectionne la pièce avec le clic droit de la souris, puis le mouvement avec un clic gauche.
 
