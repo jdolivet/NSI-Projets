@@ -7,7 +7,7 @@ Dans notre jeu, les pièces roses commencent, c’est l’équivalent des pièce
 
 Pour jouer, on sélectionne la pièce avec le clic droit de la souris, puis le mouvement avec un clic gauche.
 
-Lien vers le jeu en ligne : [https://jdolivet.forge.aeif.fr/270-echecs-et-dames/Echecs-Dames.html](https://jdolivet.forge.aeif.fr/270-echecs-et-dames/Echecs-Dames.html)
+Lien vers le jeu en ligne : [https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Echecs-Dames/Echecs.html](https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Echecs-Dames/Echecs.html)
 
 Installation :  
 Pour exécuter le script Python, il est nécessaire de suivre les [consignes pour installer pyxel](https://github.com/kitao/pyxel/blob/main/docs/README.fr.md#comment-installer)
