@@ -12,6 +12,6 @@ Pour jouer, on sélectionne la pièce avec le clic droit de la souris, puis le m
 Installation :  
 Pour exécuter le script Python, il est nécessaire de suivre les [consignes pour installer pyxel](https://github.com/kitao/pyxel/blob/main/docs/README.fr.md#comment-installer)
 
-Lien vers le jeu en ligne : [https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Echecs-Dames/](https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Echecs-Dames/)
+Lien vers le jeu en ligne : [https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Echecs-Dames/index.html](https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Echecs-Dames/index.html)
 
 Lien vers la présentation vidéo : [https://tube-sciences-technologies.apps.education.fr/w/76iLTYiooKzr7ri7qHWvhD](https://tube-sciences-technologies.apps.education.fr/w/76iLTYiooKzr7ri7qHWvhD)
