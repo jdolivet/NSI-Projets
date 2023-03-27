@@ -18,6 +18,6 @@ La touche M arrête la musique
 Installation :  
 Pour exécuter le script Python, il est nécessaire de suivre les [consignes pour installer pyxel](https://github.com/kitao/pyxel/blob/main/docs/README.fr.md#comment-installer)
 
-Lien vers le jeu en ligne : [https://trophees-nsi.forge.aeif.fr/aefe-AEA/295-arcades/index.html](https://trophees-nsi.forge.aeif.fr/aefe-AEA/295-arcades/index.html)
+Lien vers le jeu en ligne : [https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Arcades/index.html](https://jdolivet.github.io/NSI-Projets/Trophees-NSI/2023/Arcades/index.html)
 
 Lien vers la présentation vidéo : [https://tube-sciences-technologies.apps.education.fr/w/uUNovy1mEXNcHJLubgRJcT](https://tube-sciences-technologies.apps.education.fr/w/uUNovy1mEXNcHJLubgRJcT)
