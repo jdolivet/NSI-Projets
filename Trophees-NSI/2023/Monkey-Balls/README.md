@@ -1,4 +1,4 @@
-# 336 Monkey Balls
+# Monkey Balls
 
 Le joueur doit utiliser des singes qui jettent des darts pour faire éclater des ballons colorés sur l'écran.  
 Le jeu est assez simple, il valorise la stratégie du joueur. 
