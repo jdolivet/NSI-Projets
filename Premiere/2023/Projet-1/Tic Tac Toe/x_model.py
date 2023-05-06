@@ -1,0 +1,20 @@
+from turtle import *
+
+def X(x, y):
+    hideturtle()
+    pencolor("blue")
+    width(5)
+    up()
+    sety(y)
+    setx(x)
+    down()
+    left(45)
+    forward(70)
+    up()
+    setx(x)
+    right(90)
+    down()
+    forward(70)
+    left(90)
+    right(45)
+    up()

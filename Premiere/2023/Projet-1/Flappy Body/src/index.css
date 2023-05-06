@@ -1,0 +1,18 @@
+.input_video {
+  width: 20%;
+  height: fit-content;
+}
+
+canvas:not(.output_canvas) {
+  /* Hacky way to make canvas appear on the screen */
+  transform: translateX(20%) translateY(50%) scale(2);
+
+  /* All possible filters to remove antialiasing, to show the pixel art unblurred */
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}

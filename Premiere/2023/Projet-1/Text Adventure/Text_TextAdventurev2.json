@@ -1,0 +1,1926 @@
+{
+    "Template":{
+        "Text": "",
+        "Options":[
+            ""
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "":{
+        "Text": "Warning! This was made only as a joke and wasn't intended to hurt anyone or anything.\nAny similarities with real life individuals or places are a mere coincidence.\n\nWelcome to a completely sensical Text Adventure. Would you like to read [How to play]?",
+        "Options":[
+            "Yes",
+            "No"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "1":{
+        "Text": "You will be put into a setting. You will be shown the description and several choice options you can follow to progress the story. Each choice will change the outcome of the story.",
+        "Options":[
+            "I am done reading."
+        ],
+        "Ending": false,
+        "End of the Tutorial": true
+    },
+    "2":{
+        "Text": "",
+        "Options":[
+            "I am done not reading"
+        ],
+        "Ending": false,
+        "End of the Tutorial": true
+    },
+    "0":{
+        "Text": "You wake up in a cave.",
+        "Options":[
+            "Look for the exit",
+            "Scream",
+            "Light a torch",
+            "Wait"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01":{
+        "Text": "You don't find the exit but you find a lobster.",
+        "Options":[
+            "Ignore the lobster and keep looking for an exit",
+            "Eat the lobster",
+            "Befriend the lobster",
+            "Watch the lobster"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "011":{
+        "Text": "You eventually find a way blocked by rocks. It seems that this part of the cave collapsed",
+        "Options":[
+            "Try to move the rocks",
+            "Ask the rocks to clear the way",
+            "Look for another way",
+            "Eat a rock"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0111":{
+        "Text": "As you move rocks to create a path to yourself, you accidently make some of the rocks fall on you. You stay stuck under the rocks, unnable to move until you die with your organs crushed.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112":{
+        "Text": "You ask the rocks to clear the way. As soon as you stop speaking the rocks assemble and form a giant Dwayne 'The Rock' Johnson statue. The Rock's voice echoes in your mind:\n'Who awakes me from my slumber? What do you wish mortal?'",
+        "Options":[
+            "'I wish to leave this cave'",
+            "'I wish for an autograph'",
+            "'Sorry for disturbing you'",
+            "'I wish for a rock and a stone'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01121":{
+        "Text": "'I shall grant your wish, and return to my slumber. Unfortunately, my powers are restricted to the jungle.' \nThe the rock statue lifts its hand and a portal opens itself under you. You fall through it and find yourself in a jungle.",
+        "Options":[
+            "Look for a way out of the Jungle",
+            "Scream",
+            "Sing",
+            "Wait"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "011211":{
+        "Text": "You start venturing through the jungle. Eventually, you see a sign. You get closer to read the sign, it is written 'To be continued'",
+        "Options":[
+            "End your run",
+            "Wait for the developers to add new content",
+            "Look behind the sign",
+            "Ignore the sign",
+            ""
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0112111":{
+        "Text": "Are you sure you want to end your run?",
+        "Options":[
+            "Yes",
+            "Yes",
+            "Yes",
+            "Yes"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112112":{
+        "Text": "The developers were lazy and didn't want to go this far. They eventually forget this code entirelly, never having updated it once.",
+        "Options":[
+            "Slowly vanish as you are being forgotten"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112113":{
+        "Text": "Behind the sign there is Rick Astley's 'Never gonna give you up' music video. You start hearing in an infinite loop inside your head:\n'We're no strangers to love\nYou know the rules and so do I (do I)\nA full commitment's what I'm thinking of\nYou wouldn't get this from any other guy\nI just wanna tell you how I'm feeling\nGotta make you understand\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\nWe've known each other for so long\nYour heart's been aching, but you're too shy to say it (say it)\nInside, we both know what's been going on (going on)\nWe know the game and we're gonna play it\nAnd if you ask me how I'm feeling\nDon't tell me you're too blind to see\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\nWe've known each other for so long\nYour heart's been aching, but you're too shy to say it (to say it)\nInside, we both know what's been going on (going on)\nWe know the game and we're gonna play it\nI just wanna tell you how I'm feeling\nGotta make you understand\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you\nNever gonna give you up\nNever gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry\nNever gonna say goodbye\nNever gonna tell a lie and hurt you'",
+        "Options":[
+            "That's it. You've been rickrolled. That's the end of your run."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112114":{
+        "Text": "You keep walking, ignoring the sign. Eventually, you fall through the floor. You wake up in an infinite maze of randomly generated yellow office rooms.",
+        "Options":[
+            "You know how this ends."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112115":{
+        "Text": "You have found the dev. Yes ONE dev. Guess who it is. I won't say who. The dev says:\n'Writing all of these was a pain. Hope you are enjoying the fruit of my suffering.'",
+        "Options":[
+            "'I'll have to force an ending now. Sorry.'"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "011212":{
+        "Text": "You scream. You scream so hard that all the hot birds in your area fly away.",
+        "Options":[
+            "Did you think I was done? HAHAHAHA. Your scream attracted a Kcolbda (very scary predator!!!!). It eats you alive."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "011213":{
+        "Text": "You sing 'Welcome to the Jungle'. Your hair falls, but your body now is in perfect shape. You feel like you could cross the jungle without breaking a sweat.",
+        "Options":[
+            "Cross the jungle",
+            "Settle down",
+            "Fight wildlife"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0112131":{
+        "Text": "You start crossing through the jungle. You reach the end of the jungle with ease. You can already see civilisation. You look behind to the jungle that has granted you such aventures.",
+        "Options":[
+            "Leave the jungle",
+            "Stay in the jungle"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01121311":{
+        "Text": "As you leave the jungle, your body starts to deflate. You lose your strength. Your hair grows. You hear from the Jungle: 'bEtRaYeR'. Vines start moving as if they were tentacles and grab you. You choke to death.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01121312":{
+        "Text": "You turn back and enter the jungle again. You live happily ever after with the food and water the jungle provides and plant many trees. Your hair never regrows.",
+        "Options":[
+            "After living a happy life, you eventually die of old age, becoming one with the jungle."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112132":{
+        "Text": "You decide to settle down and build yourself a nice shack. You start punching trees to collect wood. It doesn't work like in the game minecraft. You hurt your hands. That makes you sad.",
+        "Options":[
+            "Death by sad"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112133":{
+        "Text": "You decide to fight wildlife. You quickly find various animals to fight with. After a long day of winning fights against animals, the director is pleased with the action you have provided him. You leave the set and go home. You look in the mirror, and realise you are now Dwayne 'the Rock' Johnson's doppelganger.",
+        "Options":[
+            "Die in a sad accident after becoming The Rock's stuntman"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "011214":{
+        "Text": "You sit on the spot and wait. Soon after the director screams at you:\n'HEY! WHY AREN'T YOU DOING ANYTHING?! GIVE ME SOME ACTION!'",
+        "Options":[
+            "'No'",
+            "'Yes' and attack the director",
+            "'Can I go home?'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0112141":{
+        "Text": "'Alright then. I'll follow the contract.' the director takes out a revolver and shoots you.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112142":{
+        "Text": "The director takes off his shirt, exposing his muscular body. 'You wanna fight boy? Then come and get it.'. It is bloody fight, but you end up defeating him, and throwing him to the ground.",
+        "Options":[
+            "Help him get up.",
+            "Leave him like this",
+            "Finish him"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01121421":{
+        "Text": "'You fought well boy' the director says, with a proud smile. 'Wanna get a drink with this old man? My treat.' You accept. You and the director drink until the bar closes. You say goodbye to each other and go each one his way.",
+        "Options":[
+            "Die in a car accident because you chose to drive drunk. (The director gets really sad)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01121422":{
+        "Text": "You turn back, and walk in a badass way. You hear a gunshot. You feel an immense pain in your chest. You realise you were shot. You say 'Oh my god. I was shot!!'. You look back to the director holding a revolver and smiling. 'Never leave a fight unfinished boy.'",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01121423":{
+        "Text": "You crush the director's head under your feet. The whole staff is in panic. You hear the polis arriving.",
+        "Options":[
+            "Get arrested and spend the rest of your life in prison."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112143":{
+        "Text": "The director sighs 'You better be well tomorrow, or we'll have some trouble with the contract.'. He sends you home.",
+        "Options":[
+            "Go home, but stay stuck in Dwayne 'The Rock' Johnson's Doppelganger's body for the rest of your life"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01122":{
+        "Text": "'Mortal, you have awakened me from my slumber for such a puny reason? You shall pay for disturbing me.' The The Rock statue lifts its hand and throws a stone at you.",
+        "Options":[
+            "Get hit on the head by the rock and die."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01123":{
+        "Text": "'Was it an accident?'. The rock does the eyebrow thing.",
+        "Options":[
+            "vinexplode"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124":{
+        "Text": "The the rock statue sighs 'You're after the dwarves right? I'll open the way'. The the rock statue opens the way further down the cave. You walk further down the cave and find many mines. You also find a pickaxe.",
+        "Options":[
+            "Explore the mines",
+            "Pick up the pick axe and mine",
+            "Ignore and proceed"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "011241":{
+        "Text": "As you start exploring the mines,  you start to hear a rumbling. You see a dwarf running through you and pushing you to the side.",
+        "Options":[
+            "Run with him",
+            "Go to where he was running from",
+            "Hide",
+            "Ask why is he running"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0112411":{
+        "Text": "You run with him, but you realise he is slower than you because of his short legs.",
+        "Options":[
+            "Just run",
+            "Carry him on your back"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01124111":{
+        "Text": "You keep running but you suddenly stumble and fall to the ground. You realise that the Dwarf used his pickaxe to make you fall. 'Sorry pal. 't was you or me'",
+        "Options":[
+            "Get eaten by a Glyphid Praetorian (big spider thingy)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124112":{
+        "Text": "You carry him on your back, and you realise he is pretty heavy for his size. You start getting more and more tired. He keeps screaming 'RUN! RUN! THERE'S A SWARM INCOMING!'",
+        "Options":[
+            "Eventually reach a dead end. The dwarf pulls out his pickaxe and says ''t was nice meeting you pal'. You both are devoured by a swarm of glyphids, while fighting to no avail."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112412":{
+        "Text": "You go in the opposite direction as the dwarf. Quickly, you come across a Glyphid Praetorian (just google it).",
+        "Options":[
+            "Run",
+            "Fight",
+            "Bag",
+            "Pokemon"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01124121":{
+        "Text": "You try to run. The Glyphid Praetorian spits acid on you.",
+        "Options":[
+            "Die a painful death as your flesh melts"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124122":{
+        "Text": "You try to fight. The Glyphid Praetorian is too strong for you.",
+        "Options":[
+            "Be devoured by the Glyphid Praetorian"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124123":{
+        "Text": "You don't have a bag",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124124":{
+        "Text": "Pokemons don't exist.",
+        "Options":[
+            "Die but sad"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112413":{
+        "Text": "There is nowhere to hide.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112414":{
+        "Text": "'If you don't know you must be from another company!'. Before you can react the dwarf strikes you on the head with his pickaxe.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "011242":{
+        "Text": "When you pick up the pickaxe, a voice echoes through your mind.\n'Miner! You've reconnected! Thank God! I thought I would have to request another deserter capture mission. Please go back to work.'",
+        "Options":[
+            "Mine",
+            "Let go of the pickaxe",
+            "Explain that you are not a miner",
+            "'Who are you?'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0112421":{
+        "Text": "You mine, and you mine and you mine. You start to get used to your new job. You started getting along with your dwarven coworkers. The job is hard but rewarding at the end of each mission.",
+        "Options":[
+            "Eventually, you don't make it out, and stay stuck on Hoarxes IV when your coworkers took the escape pod. You fought valliantly until your death to the glyphids. Your name will be forever in the memorial to the fallen of Deep Rock."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112422":{
+        "Text": "'Wait miner, don't do what I think you'll d-' The voice stops as soon as you let go of the pickaxe.",
+        "Options":[
+            "Live the rest of your life in the mines, escaping from both Dwarves and Glyphids, eventually dying of food poisoning because glyphids were the only thing left for you to eat."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112423":{
+        "Text": "'God damn it! I hate to deal with you amnesiacs. Number 12, send APD-D317 to retrieve him.'\n They never managed to 'Fix you', and Deep Rock didn't want to waste money so they just put you out of your misery.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112424":{
+        "Text": "'I'm afraid that's against company policies and you know that very well number 18. By the way that's also worth a warning. Let me add it on the system, just a second. Hohoho! How unnexpectanded of our dear number 18, it's your third advertising, which means you're fired. I'll communicate to the rest of the team they don't have to save you. And don't you dare try to sneak in the escape pod.'",
+        "Options":[
+            "Try to sneak in the escape pod",
+            "Wait"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01124241":{
+        "Text": "You look for another Dwarf, and watch him from afar. You follow him to the escape pod, and manage to slip inside the escape pod and hide.\n'You do know I can see your location right? Boys, open fire.'",
+        "Options":[
+            "Be shot to death by the Dwarves"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124242":{
+        "Text": "'Miner! Don't be so sad. You only suffered the consequences of your actions. As a parting gift I'll tell you one thing. There's a swarm on your way.'",
+        "Options":[
+            "Die while fighting the swarm"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "011242421":{
+        "Text": "You somehow, manage to survive the swarm, killing all the glyphids with your pickaxe, but you're severely injured.\n'Amazing number 18! I never expected you to do something like this! Maybe we were too harsh on you! The company will offer you a ride back to the HQ, and decide what we will do afterwards! Make your way to the escape pod.'",
+        "Options":[
+            "Try to make your way to the escape pod.",
+            "Refuse."
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0112424211":{
+        "Text": "You follow the instructions of the voice inside your head, and manage to reach the escape pod just in time as he departs. The dwarves there look at you strangely and point their guns at you:\n'Huh... Comand center.. This ain't number 18. It ain't even a dwarf.'\n'What?! It must have taken number 18's pickaxe then! That means that NUMBER EIGHTEEN DESERTED FOR THE THIRD TIME THIS MONTH!!! That's it! I'm putting a bounty on him! Well, about fake number eighteen, what are you? Choose your words wisely, the boys will not hesitate to shoot you.'",
+        "Options":[
+            "'I'm a human'",
+            "'I'm a bounty hunter'",
+            "'I'm a deserter'",
+            "'I'm from another company''"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01124242111":{
+        "Text": "'I don't know what that is, but you don't seem hostile. We'll see what to do to you when we get to the HQ. For now, stay calm boys, but don't take your eyes off, fak-... We need another number for you, we can't keep calling you fake number eighteen forever. Let me see in the system the latest number...... IF THIS SYSTEM WORKED! GOD DAMNIT WHAT AM I DOING WITH MY LIFE! I don't care anymore, you'll be number zero.'\nAfter goig to Deep rock's HQ, they decided it would be safe for you to be hired. You became a legend between Deep rock's dwarves: Zero, the tall man that survived a swarm with only a pickaxe. Your popularity gave you favorability with the higher ups of deep rock and with it came a few privileges.",
+        "Options":[
+            "Live the rest of your life working for Deep rock (with priviledges)."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124242112":{
+        "Text": "'Well, that's practical. Would you like to take on number 18's bounty? It's 16000 credits!'",
+        "Options":[
+            "Accept",
+            "Deny"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "011242421121":{
+        "Text": "Number 18 was the beginning of your new career, and only one of the many bounties you'd take on for Deep Rock.",
+        "Options":[
+            "Live the rest of your life as a bounty hunter working for Deep Rock, and eventually dying in one of your bounties after an exciting life"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "011242421122":{
+        "Text": "'Well, too bad. But you'll have to pay for the trip.' These words ruined your life. You never managed to quit the debt you had with Deep Rock, as it kept growing faster than you could pay it, even when you worked as hard as you could.",
+        "Options":[
+            "Live the rest of your life in poverty working for Deep rock."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124242113":{
+        "Text": "'He's a spy. Deserters don't come back. Open fire boys.'",
+        "Options":[
+            "Get shot by the Dwarves and Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01124242114":{
+        "Text": "'Oh? Which one?' You stay in silence as you cannot anser. 'Alright he's a spy. Shoot him boys'",
+        "Options":[
+            "Get shot by the Dwarves and Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112424212":{
+        "Text": "'Well, too bad. I won't even bother putting a bounty on you. Farewell'",
+        "Options":[
+            "Bleed to death"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "011243":{
+        "Text": "You keep going deeper and deeper into the cave, without the sign of an exit. Suddenly, you are thrown to the ground and lose conscience. When you wake up, a tiny grey man is mining besides you. He is chained. He looks at you and says:\n'Oh! You're finally awake! My name is Svirfneblin! And before I ask you yours, you better start working, an overseer is comming.'\nHe gives you a pickaxe.",
+        "Options":[
+            "Start mining",
+            "Do nothing",
+            "Run"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0112431":{
+        "Text": "A spider, with the upper half of a human, holding a whip passes by, piercing you with his gaze. Svirfneblin explains that that is a Drider, a species that controls most of the underdark and love enslaving other species.",
+        "Options":[
+            "Live a short life as a slave alongside Svirfneblin (pretty chill guy) until you die of exhaustion."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112432":{
+        "Text": "You do nothing. A spider, with the upper half of a human, holding a whip arrives and sees that you are not working, it starts to whip you. Svirfneblin puts himself his way and says that you're ne and he'll teach you to work.\n'How dare you talk back to an overseer.'\nSvirfneblin is whipped to death.",
+        "Options":[
+            "Live a short life as a slave, alone and miserable, until you die of exhaustion."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0112433":{
+        "Text": "You start running. You pass by various other beings in a state similar to Svirfneblin. Quickly you're thrown to the ground by what seems to be a lot of spiderwebs thrown at you. You feel something pierce through your back and inject something in your veins.",
+        "Options":[
+            "Die a painful death as the poison spreads through your body."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0113":{
+        "Text": "You look for another way. You search and search but can't find it. It's to late when you realise you're really hungry and there's nothing to eat.",
+        "Options":[
+            "Die of hunger"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0114":{
+        "Text": "You eat a rock. The rock damages your internal organs. What did you expect?",
+        "Options":[
+            "Die of internal bleeding"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "012":{
+        "Text": "You try to eat the lobster. The lobster is faster and pinches your nose. The lobster steals your nose.",
+        "Options":[
+            "You can't breathe anymore. Die."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013":{
+        "Text": "You try to befriend the lobster. You succeed. You have a friend lobster now. You keep looking for the exit. After a while you find a [rooster]. The [rooster] seems agressive.",
+        "Options":[
+            "Play the vineboom sound effect everytime the narrator says [rooster].",
+            "Make the lobster fight the [rooster]",
+            "Fight the [rooster]",
+            "Run from the [rooster]"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0131":{
+        "Text": "You hear a large rumbling. A statue of Dwayne 'The Rock' Johnson made of rock walks in.\n'I see you have a sick sense of humor.'",
+        "Options":[
+            "Make the lobster fight the rock The Rock statue",
+            "Do the eyebrow thing",
+            "Ask for an autograph"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false,
+        "Vineboom": true
+    },
+    "01311":{
+        "Text": "You scream to the lobster to attack the rock The Rock statue. Before the statue can even react, the lobster rushes to him and and breaks one of its legs with its claw. The rock The Rock statue crumbles. You obtain the The The Rock rock, which has the face of The Rock when he does the eyebrow thing and plays whatever sound effect you'd like whenever you look at it. The experience accumulated from the battle makes the lobster evolve into the blue lobster.",
+        "Options":[
+            "Play the Bad to Bone Riff sound effect",
+            "Fight the blue lobster",
+            "Make the blue lobster fight the [rooster]",
+            "Give the [rooster] the The Rock rock"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "013111":{
+        "Text": "The Bad to bone sound effect unlocks something in the blue lobster. The blue lobster evolves into the rock lobster.",
+        "Options":[
+            "Give the rock lobster the The Rock rock",
+            "Play the vine boom sound effect",
+            "Make the rock lobster fight the [rooster]"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0131111":{
+        "Text": "The rock lobster absorbs the The Rock rock. It becomes the The Rock rock rock lobster. The The Rock rock rock lobster inherited the rock The rock statue's resentment. It attacks you. Its power is overwhelming.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0131112":{
+        "Text": "The rock lobster explodes, sending you flying away. The rock lobster has reached it's final form: The Iraq lobster.\n'Human, you have aided me in my quest to achieve my final form. I shall grant you one wish in return.' says the Iraq lobster, with a booming voice.",
+        "Options":[
+            "'I wish to go home'",
+            "'I wish to be healed'",
+            "'I wish for unlimited power'",
+            "'I wish for the run to end'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01311121":{
+        "Text": "The Iraq lobster explodes, hurting you. When you open your eyes, you're home, but you are still wounded. You are to wounded to even move.",
+        "Options":[
+            "Bleed to death"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01311122":{
+        "Text": "The Iraq lobster explodes, hurting you. When you open your eyes, your body is fully healed.\n'Farewell then, human'\nThe Iraq lobster vanishes in an explosion, that hurts you.'",
+        "Options":[
+            "Bleed to death"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01311123":{
+        "Text": "The Iraq lobster explodes, but you weren't hurt. Your newfound power protected you. You are now immortal.",
+        "Options":[
+            "Use power"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "013111231":{
+        "Text": "You explode from within. Your body is ripped to shreds.",
+        "Options":[
+            "Endure eternity unable act in any way."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01311124":{
+        "Text": "The Iraq lobster explodes. Your run ends.",
+        "Options":[
+            "That's it."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0131113":{
+        "Text": "The rock lobster understands that it is but a puppet, to fight your battles. The rock lobster starts writing a song about it. The [rooster] attacks you.",
+        "Options":[
+            "Death by [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013112":{
+        "Text": "You try to fight the blue lobster. Immediately a distorted version of the blue lobster appears in your mind. A sick sound effect comes with it.",
+        "Options":[
+            "Go insane"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013113":{
+        "Text": "The blue lobster is completely overpowered by the [rooster]. The [rooster] attacks you next.",
+        "Options":[
+            "Death by [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013114":{
+        "Text": "The [rooster] absorbs the The Rock rock. The [rooster] is now rock-hard. The rock-hard [rooster] attacks you anyway.",
+        "Options":[
+            "Death by rock-hard [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01312":{
+        "Text": "You do the eyebrow thing.\n'You dare to challenge me to an eyebrow dispute?'\nWhen the rock The Rock statue does the eyebrow thing, it is so powerful that you are turned into dust.",
+        "Options":[
+            "Bite the dust"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01313":{
+        "Text": "The rock The Rock statue sighs 'I expected more of you.'\nThe rock The Rock statue picks up a rock and writes 'From the rock The Rock statue' on it. He gives the rock to you and walks away",
+        "Options":[
+            "Give the autograph to the lobster",
+            "Give the autograph to the [rooster]",
+            "Keep the autograph"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "013131":{
+        "Text": "The lobster doesn't know how to read. While it is trying to comprehend it, the [rooster] murders it, you and your entire family. [insert your mom joke]",
+        "Options":[
+            "Death by genocidal [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013132":{
+        "Text": "The [rooster] seems happy. The [rooster] was secretly a great fan of the rock The Rock statue. The [rooster] is now following you.",
+        "Options":[
+            "Make the [rooster] and the lobster fight",
+            "Fuse the [rooster] and the lobster",
+            "Make the [rooster] and the lobster find a way out of the cave"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0131321":{
+        "Text": "The [rooster] and the lobster don't want to fight each other. They are friends now. They realise that you're the cause of this situation. They decide to nip the evil in the bud",
+        "Options":[
+            "The animals revolt. You are executed."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0131322":{
+        "Text": "The lobster and the [rooster] do a funny little dance, and become an eldritch horror (like from that one anime of the guy with a robot arm) forever present in you mind.",
+        "Options":[
+            "Go insane"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0131323":{
+        "Text": "Using the power of friendship you manage to find a way out. Unfortunately, the power of friendship doesn't protect you from a 30ft deep pit traps.",
+        "Options":[
+            "Experience the power of friendship moment (sad lobster and sad [rooster])"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013133":{
+        "Text": "You keep the autograph for yourself. The [rooster] targets you for some reason.",
+        "Options":[
+            "Death by envious [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0132":{
+        "Text": "The [rooster] absolutelly demolishes the lobster, and then you.",
+        "Options":[
+            "Average [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0133":{
+        "Text": "With one swift movement, the [rooster] penetrates all of your defenses, making you feel tremedous pain. The size of this [rooster] is no joke.",
+        "Options":[
+            "Die from the HUGE [rooster]'s penetration"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0134":{
+        "Text": "You realise that the [rooster] is too strong for you and the lobster. You start running, but realise that the lobster can't escape quick enough because it is an aquatic animal, therefore not fully adapted to terrestrial movement.",
+        "Options":[
+            "Sacrifice yourself",
+            "Sacrifice the lobster"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01341":{
+        "Text": "You throw the lobster as far from the [rooster] as you can, and prepare yourself to by the lobster as much time as possible. Unfortunately the [rooster] defeated you qyuickly.",
+        "Options":[
+            "Hope that the lobster survives"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01342":{
+        "Text": "You have no choice but to leave the lobster behind. It was you or him after all. You look back and see the lobster realising you're leaving it behind. You run as tears drop through your face. Your friendship didn't last long, but it was a heartwarming one. You manage to escape.",
+        "Options":[
+            "Train for revenge",
+            "Commit suicide",
+            "Move on and look for the exit"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "013421":{
+        "Text": "You start training for your revenge. You train for an entire month. Eventually, a goblin passess by and is admired by your determination. He offers you to come and train in his camp.",
+        "Options":[
+            "Accept",
+            "Deny"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0134211":{
+        "Text": "You follow the goblin through a secret passageway that you wouldn't have found alone. He tells you to be careful with the traps that the goblins lay around their camps. He guides you outside the cave into the goblin camp, presenting you to the goblins. They are all amazed by you during your training, which the goblin coaches. That lasts for a year. The goblin organises the round and brings the [rooster] to a makeshift arena.",
+        "Options":[
+            "Abandon the match",
+            "Flee from the camp",
+            "Go fight the [rooster]"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "01342111":{
+        "Text": "You say you're no longer going to fight to the golins. Your coach seems angry and desperate.\n'What do you mean you're not gonna fight! You promised me! You promised us! Where's the determination I saw in you? What did we spend all of this time together for?'",
+        "Options":[
+            "Maintain your decision.",
+            "Turn back and go fight the [rooster]"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "013421111":{
+        "Text": "'You... You know something don't you? C'mon bro tell me! I'm your friend, right? We can fix this together! And think of all the glory you'll have when you win! You're not going to let go know are you?'",
+        "Options":[
+            "'Yes, I won't fight'",
+            "'No, I'll fight'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0134211111":{
+        "Text": "Your coach looks sad and frustrated.\n'All right. Do whatever you want'\nAll the goblins boo you. Rocks start to fly in your direction. You run, but the goblins run after you getting more and more violent. You can't see very well because you're protecting your head with your arms. Eventually, as you leave the camp. You fall into a pit trap.",
+        "Options":[
+            "You die impaled in a spike in the bottom of a pit."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0134211112":{
+        "Text": "'Good choice pal!' says your coach, with a nervous smile.'\nThe goblins look at you with disappointment.\n\nWhen the day arrives you see the coach throwing away a vial with a dark liquid inside. The coach goes to your tent.\n'I... I know this is hard for you... But do the best you can! I trust you! I know you can win!'\nWhen going to the fight, you see that all the goblins are watching you, almost if expecting you to give up.\nThe fight begins. You rush towards the [rooster] with all your strength, for the lobster and for the coach. The battle lasts for a long while. But in the end, you are victorious. The coach rushes to see you.\n'HAHAHA! I knew you could do it! And look! I betted all my money on you despite the odds, and you won! There. Half is yours!'\nHe gives you a lot of money.",
+        "Options":[
+            "Live the rest of your days as a professional wrestler for the goblins alongside your coach"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013421112":{
+        "Text": "The goblins opinion on you seem to have shifted a little. The coach seems to have lost faith in you. You are discouraged. When the day of the fight arrives, you don't feel so enticed to defeat the [rooster]. When the fight begins, the [rooster] rushes at you, you don't have time to react and he sinks his claws in your eyes, blinding you. The fight only goes downhill from there. after you are defeated, the goblins only ignore you.",
+        "Options":[
+            "Accidentally fall in a pit trap and die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01342112":{
+        "Text": "One night, decide to let go of your determination and flee like a coward. You know the camp in and out. You manage to flee. You run through the surrounding woods, avoiding the traps. Eventually, you reach a large stone wall. Walking alongside it you eventually find a sign ion which it is written: 'To be continued'",
+        "Options":[
+            "Placeholder line!!!!!!!!"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "01342113":{
+        "Text": "The day arrives, all the goblins are cheering for you. You know you're ready. Your coach is firing you up along with the crowd of goblins. He gives you some water, in a clay pot. It tastes weird. The fight begins, you rush towards the [rooster]. The fight is intense, but you are winning. But, overtime, you seem to get weaker and weaker. You see in the side lines, your coach talking to other goblins and money seems to be involved. When your eyes meet, he smiles. You end up losing the fight. After that, the goblins boo you, and throw rocks at you. You can hear rumors of how the coach became extremely rich. But, you don't stop getting weakr, weaker and weaker.",
+        "Options":[
+            "Die soon after."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0134212":{
+        "Text": "You deny his offer, and keep on training. The goblin seems frustrated. Soon after, the [rooster] attacks you in the middle of your training. Tired and surprised, you can't do much to defend yourself.",
+        "Options":[
+            "Death by surprise [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013422":{
+        "Text": "You throw yourself in a cool pit trap you found while running away.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "013423":{
+        "Text": "You move on, and try to find an exit. but you always seemed to find the [rooster] again and again. Without much food, you eventually die of hunger.",
+        "Options":[
+            "Starrrrrrrrrvation"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "014":{
+        "Text": "You like watching the lobster go around, and live its life. You find it amusing. But to the lobster, you are a creepy stalker. And stalking is a crime even in the underwater constitution. The lobster called the great underwater lawyer Sal Goodmon that wasn't actually a salmon. You were sued. You lost the underwater jusdgement.",
+        "Options":[
+            "Get arrested and drown in underwater jail."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "02":{
+        "Text": "You scream. You feel like you've disturbed someone.",
+        "Options":[
+            "Get hit on the head by a rock and die."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "03":{
+        "Text": "You don't have a torch. Your addiction to torches is making you feel cold without one.",
+        "Options":[
+            "Look for a torch",
+            "Try to heat yourself",
+            "Ignore and look for an exit"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "031":{
+        "Text": "There is no torch. You're feeling colder and colder.",
+        "Options":[
+            "'There must be a torch somewhere right?'",
+            "Set random objects on fire",
+            "Ignore and look for an exit"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0311":{
+        "Text": "THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH THERE IS NO TORCH",
+        "Options":[
+            "Go insane"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0312":{
+        "Text": "You have no way to make fire",
+        "Options":[
+            "Go insane"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0313":{
+        "Text": "I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH I NEED A TORCH ",
+        "Options":[
+            "Go insane"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "032":{
+        "Text": "You try to heat yourself. It is ineffective. The cold is inside your mind.",
+        "Options":[
+            "Heat your mind",
+            "Ignore"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0321":{
+        "Text": "You crack your skull open by hitting it on a rock while trying to access your brain.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0322":{
+        "Text": "You mentally freeze to death.",
+        "Options":[
+            "Mentally freeze to death."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "033":{
+        "Text": "You try to ignore. But the cold returns. The cold aways returns. The cold is unescapable.",
+        "Options":[
+            "Go insane"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04":{
+        "Text": "You wait. You eat moss from the walls and drink droplets that fall from the ceiling while spending as little energy as possible. You do that for a month. One day, you realise you are being watched by a goblin. The goblin soon leaves.",
+        "Options":[
+            "Follow the goblin.",
+            "Keep waiting",
+            "Look for an exit"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041":{
+        "Text": "You follow the goblin. You find a secret passageway that you wouldn't have found alone. The goblin walks in weird zigzagging patterns.",
+        "Options":[
+            "Walk identically to the goblin",
+            "Go back and wait"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411":{
+        "Text": "You imitate the movements of the goblin. You manage to find your way out of the cave.",
+        "Options":[
+            "Go to the goblin camp",
+            "Go to the forest"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04111":{
+        "Text": "You go to the goblin camp. As you arrive closer, you hear a scream:\n'INTRUDER!'\nArrows start flying in your direction.",
+        "Options":[
+            "Get hit by an arrow and die."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112":{
+        "Text": "You go to the forest. You keep walking through it until you find a large stone wall. Walking alongside the large stone wall you fin the entrance to a medieval looking city.",
+        "Options":[
+            "Enter the city",
+            "Keep exploring the forest"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121":{
+        "Text": "You enter the city. Everyone looks at you strangely, and whisper to each other.",
+        "Options":[
+            "Ask what are they whispering about",
+            "Keep looking through the village."
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411211":{
+        "Text": "When you approach someone, the person screams:\n'The witch is going to do something to me!'\nSoon after, guards arrive, they restrain you, and tie you to a log.",
+        "Options":[
+            "Cozy campfire death hmmmmmmmmmmmmmmmmmmmm"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212":{
+        "Text": "It seems that they use a currency called gold coins (GO). You don't have any GOs. You are going to have to find a job for that. You find two panflets with bounties on them.",
+        "Options":[
+            "Take the panflet 'Goblin camp subjugation (50 GO)'",
+            "Take the panflet 'Mysterious Furry Beast subjugation (75 GO)'",
+            "Try to find another job"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04112121":{
+        "Text": "You make your way back to the goblin camp, and prepare to invade it. You hadn't planned there would be so many traps.",
+        "Options":[
+            "Fall in a pit trap."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122":{
+        "Text": "Where do you want to look for the Mysterious Furry Beast?",
+        "Options":[
+            "The forest",
+            "The slums",
+            "The goblin camp",
+            "The cave"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121221":{
+        "Text": "You start venturing through the forest. You suddenly start levitating.\n'See Margaret? That's how easy it is too catch a test subject'\nYou see an old lady, and a younger looking lady getting out of a bush. The younger lady looks at you with pity.",
+        "Options":[
+            "Suffer imensurably as a test subject to death"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222":{
+        "Text": "As you go to the slums, you see more and more people reuniting in a circle. You get closer to see in the center an extremely hairy man speaking to the croud. A drone flies above him.\n'Hello everyone. I'm MISTER BEEEEEEEEEEEEEAST! I just came back from my most recent video: I spent 3000 years in a cave! Today, I'm here to give one of you the chance to become very rich! All you have to do is defeat me in a rap battle. Each time someone loses the rap battle I'll heal one of these children that I poisoned. Why don't we start with you?' He points at you.",
+        "Options":[
+            "Rap with Mr Beast",
+            "Purposefully lose in a rap battle against Mr Beast",
+            "Punch Mr Beast",
+            "Refuse."
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212221":{
+        "Text": "You start riming. It is okay but not the best. When Mr Beast opens his mouth and introducts himself again. You know you lost. You can't possibly win against his 'MISTER BEEEEEEEEEEEEAST!!!!'.",
+        "Options":[
+            "Get your soul stolen by Mr Beast (but heal a child)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222":{
+        "Text": "'You're trying to lose aren't you?' Says Mr Beast angrily. 'That's doesn't make for an interesting video!!! Get out of my way you poor scum.'\nMISTER BEEEEEEAST! walks away, frustrated. The other people of the slum are also angry because they lost the chance to become very rich and escape from this miserable life.",
+        "Options":[
+            "Follow mister beast",
+            "Try to calm down the people from the slum",
+            "Go back to the city"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04112122221":{
+        "Text": "You follow Mr Beast, as he walks away to the forest. He looks back and says.\n'What do you want now?'",
+        "Options":[
+            "'A rap battle'",
+            "'Subjugate you'",
+            "'This is a robbery, give me all of your money'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121222211":{
+        "Text": "'I won't give you anything for this one. You really want a rematch for the sake of it?'\nYou confirm. Mr Beast smirks as you start having the rap battle of your lives, even without an audience. When the rap battle ends, Mr Beast is really happy.\n'You're just nice after all aren't you? Guess that could bring an interesting dynamic in my videos. Hey! Wanna be my friend?'",
+        "Options":[
+            "'Yes'",
+            "'No'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222111":{
+        "Text": "You live the rest of your life competing in Mr Beast's videos for money and charity. One day, when you give too much of you opinion during Mr Beast's video: 'Laser tag with real guns: The winner takes it all', you never see the light of the day again.",
+        "Options":[
+            "Live the rest of your life in Mr Beast's basement, competing for food on his deep web videos."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222112":{
+        "Text": "'What a bummer.'\nMuenster Cheese walks away. You didn't subjugate Mr Beast, so you don't get the reward. The other panflet has already been taken. All that's left to you is find a job, but is already late and stores are closed. You sleep on the floor.",
+        "Options":[
+            "Get murdered in your sleep"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212":{
+        "Text": "'Wha- wait no! We can talk about it! You want money don't you? I can give you money! Here that's all I got!'",
+        "Options":[
+            "Kill Mr Beast",
+            "Take the money",
+            "'It was just a joke'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222121":{
+        "Text": "You punch Missed a Beat. He doesn't put much of a fight. You punch him to death with ease. You see the soul of mister beast leaving his body.\n'You killed me. You will now suffer for eternity from too much money.'",
+        "Options":[
+            "Collect your reward",
+            "Run to the woods",
+            "Return to the cave"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04112122221211":{
+        "Text": "As you walk through the city, gold coins strat falling from your pockets. You say:\n'Hello everyone. I've got too much money. I'll give all my money to the one that kills me.'",
+        "Options":[
+            "Death by Mix the Yeast curse"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221212":{
+        "Text": "You run to the woods. Soon after, you suddenly start floating.\n'See Margaret? That's how you catch a new test subj-. Oh. He's marked. (sigh) He's useless then.'\nAn old lady an a younger looking lady get out of a bush and start to walk away. The young lady stops and says:\n'Go ahead. I just want to check something.'\nThe young lady, goes at you and says:\n'Huh.. Hello, I'm Margaret. Would you mind if I took your curse? I'll do a favor in return.'",
+        "Options":[
+            "'You can take it.'",
+            "'I want to keep it.'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121222212121":{
+        "Text": "'Thank You!' She says, and pulls out an empty vial. 'This will hurt a bit.'\nShe starts the process of removing your curse, and putting it in the vial. It doesn't hurt a bit, the pain is excrutiating. When she's done, she askes you:\n'Alright. What do you want from me? I've got my limitations but I'm still a witch.'",
+        "Options":[
+            "'Teach me magic'",
+            "'Turn me into a frog'",
+            "'Curse my ennemies'",
+            "'I'll ask the favor later'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222121211":{
+        "Text": "'Huh... I'm not that great of a spellcaster, but I can try to teach you.'\nYou and Margaret become great friends. Whenever she learns any new spell she rushes to teach it to you. And you make a living with a little show showing those spells.",
+        "Options":[
+            "Be permanently turned into a frog when Margaret's mom discovers about you two meeting each other."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121212":{
+        "Text": "'Wha-? Tha-... That's weird, but okay. Although I can't turn you into a frog (that's my mom's thing), I can turn you into a rat.'",
+        "Options":[
+            "Rat."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121213":{
+        "Text": "'Okay. I'll start the ritual.'\nUnfortunately, you have no living enemies, so the spell fails. Even worse, Margaret is not the most experienced of witches. She doesn't know how to deal with this error. You both explode.",
+        "Options":[
+            "Error: Enemies not found: Die from kaboom"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121214":{
+        "Text": "'Alright then! Go in that direction, and you'll reach my house. I'll mark you so that mom doesn't take you as a test subject.'\nShe draws a strange sign in the air. You have a sick tatto on the neck now.",
+        "Options":[
+            "Go back to the city",
+            "Go to the witches' house",
+            "Go back to the cave"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04112122221212141":{
+        "Text": "As soon as you enter the city, an alarm rings, destroying your ears. Guards quickly arrive and pin you to the ground.\n'Witch magic here!!!!!!!!'",
+        "Options":[
+            "Experience being the barbecue"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221212142":{
+        "Text": "You go to the witches' house. You knock on the door. Margaret's mom opens.\n'You... You! YOU! Who are you? I don't remember. Oh! Margaret's mark! So she caught someone. Guess she isn't that useless after all. MARGARET! IT'S FOR YOU!'\nMargaret arrives.\n'Oh! It's you. You're already here? What do you want?'",
+        "Options":[
+            "'I want a favor from you'",
+            "'I want a favor from your mom'",
+            "'Nevermind'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121222212121421":{
+        "Text": "'Wha-. A favor?' says Margaret's mom. 'What has he done to you so that you owe him a favor?!'\nMaragaret says nervously: 'Huh... Humm... He let me take his curse...'\n'YOU DID WHAT?! DID YOU KNOW THAT IS A MOTHER F*CKING CRIME?! OH, MARGARET YOU'RE IN SO MUCH TROUBLE!'\n'But mo-'\n'OH, DON'T BUT MOM ME MARGARET. GO TO YOUR ROOM, AND DON'T COME OUT UNTIL YOU FINALLY MAKE SOMETHING THAT IMPRESSES ME! Humpf. Ungrateful brat. And you... Too bad for you, Margaret's mark means little to me.'",
+        "Options":[
+            "You become Margaret's pet frog."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212121422":{
+        "Text": "'WHAT? Did I hear that right Margaret?'\nMargaret looks at you with a concerned look.\n'HEHEHEHE. I'll take your silence as a yes.'\nMargaret's mom approaches you with a crooked smile.\n'What a daring brat. Not even 100 years old. Do you think you have something to give in exchange for a favor of mine?'",
+        "Options":[
+            "'My soul'",
+            "'Margaret owes me a favor'",
+            "'Nevermind'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222121214221":{
+        "Text": "'Heh. Boring but good enough.' No matter what you ask, you'll die anyway.",
+        "Options":[
+            "Lose your soul"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121214222":{
+        "Text": "'Who's Margaret?'\n'Mom!'\n'Ah. Well anyways, I'll deal with Margaret later. Margaret owing you a favor is not my problem. If that's your best proposition, I'm sorry but you be Margaret's pet frog from now on.'",
+        "Options":[
+            "[useless arguing, you turned into a frog anyways]'"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121214223":{
+        "Text": "'Do you think you can just regret your words after being so INSOLENT?'\nMargaret looks away as her mom prepares an incantation.",
+        "Options":[
+            "Become a frog really hard"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212121423":{
+        "Text": "'Ha! Do you think you can just come and go to your heart's content??? Do you think we're here just to your disposal whenever you wish so??? Well I won't tolerate such INSULT!'",
+        "Options":[
+            "Frog."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221212143":{
+        "Text": "You go back to the cave. Just as you're going back to your cozy waiting spot, you hear a large rumbling.",
+        "Options":[
+            "Check the rumbling",
+            "Explore the cave",
+            "Wait"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121222212121431":{
+        "Text": "You follow the direction of the sound. You see a lobster at the feet of a rock The Rock statue. They seem hostile towards each other.",
+        "Options":[
+            "Help the lobster",
+            "Help the rock The Rock statue",
+            "Watch"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222121214311":{
+        "Text": "You rush in the battle, surprising the rock The Rock statue. The lobster uses the opening to strike down the the rock The Rock statue. It loses is balance and falls on the ground, crumbling into pieces. The lobster turns at you, and the image of a blue lobster appears in your mind, with a sick sound effect.",
+        "Options":[
+            "Turns out you interfered in their duel. Go insane."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121214312":{
+        "Text": "You throw a rock at the lobster, turning it upside down. With this opportunity, the rock The Rock statue crushes it under his giant muscular foot.\n'Thanks man. This little thingeh woke me up, trying to fight me. Thanks for helping me out. Oh! You have Margaret's mark! How do you know her?'",
+        "Options":[
+            "'She saved me from a curse.'",
+            "'She owes me a favor'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04112122221212143121":{
+        "Text": "'Oh no. That's why I always say that Margaret is too nice.'\nYou ask him why he's so worried.\n'Don't you know? It is a crime to interfere in other people's magic! And knowing her, she's probably going to use the curse for some spell. We need to get rid of that curse for her.'",
+        "Options":[
+            "Help Margaret.",
+            "'Looks like a big load of not my problem.'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121222212121431211":{
+        "Text": "'Here. Come with me!'\nThe rock The Rock statue opens a portal to a jungle.\n'Not the right jungle.'\nHe starts scrolling through the portal repeating 'Not this one' for a while.\n'Here! Jump in!'\nYou and the rock The Rock statue jump in the portal. Landing somewhere in the forest surrounding the witches forest. He looks around and then starts running.\n'Follow me! We need someone to distract Margaret's mom (and possibly Margaret too), and someone to climb to Margaret's room and take the curse.'",
+        "Options":[
+            "Distract the witches",
+            "Climb into Margaret's room"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222121214312111":{
+        "Text": "'All right. Go knock the door, and whatever you do, don't let them go until you hear the signal.'\nYou knock on the door. Margaret's mom opens.\n'You! YOU! Who are you? How dare you distrub me! Oh! Margaret's mark. Guess she isn't that useless after all! MARGARET!!! COME DOWN IMMEDIATELY!!!'\n'But mo-'\n'DON'T BUT MOM ME! JUST COME DOWN!'\n'Alright I'll be down soon.'\n'(sigh) She never changes. But, what are you here for, young man?'",
+        "Options":[
+            "'Margaret owes me a favor'",
+            "'There is a guy climbing your house'",
+            "'I've come for the favor you owe me'",
+            "'Margaret took my curse'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04112122221212143121111":{
+        "Text": "At that moment, Margaret arrives.\n'Oh... Is that so?...' Margaret's mom mutters.'Care to explain WHY, Margaret? Don't you dare lie.'\nMargaret looks down.'I... He... He let me take his curse.'\n'He WHAT?! DO YOU KNOW WHAT YOU'VE F*CKING DONE MARGARET?! Back to your room! And YOU...'",
+        "Options":[
+            "Get turned into a frog."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221212143121112":{
+        "Text": "'Wait, WHAT?'\nYou go out and see the rock The Rock statue climbing towards Margarets room. Surprised, he says:\n'Did you just betray me?'\nBefore he can do anything, he gets turned into a rock frog statue.\n'Thanks young man. As per the magic rules, I shall return you the favour. Is there anything you wish?'",
+        "Options":[
+            "'The rock frog statue'",
+            "'Margaret'",
+            "'I want you to teach me a spell'"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041121222212121431211121":{
+        "Text": "'All right. Take it. It has no value to me anyway.'\nAs soon as you touch the frog statue you hear The rock's voice in your mind.\n'It was all a trap, wasn't it? Well, I won't go down alone. Experience the full power of the jungle.'",
+        "Options":[
+            "Experience eternal suffering in a mental jungle."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212121431211122":{
+        "Text": "'WHAT?! Do you think you... Wait. This actually is a great idea! This way I can get rid of her!'\nMargaret is put under a spell that forces her to obey you unless it threatens her life. You two walk away. Margaret is feeling down.",
+        "Options":[
+            "Set Margaret free",
+            "Don't set Margaret free"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222121214312111221":{
+        "Text": "'What? You're setting me free? Was that all a plan to take me away from my mother? Gosh, but you killed Rock...I... I need some time to think...'\nYou never see Margaret again.",
+        "Options":[
+            "To be continued"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121214312111222":{
+        "Text": "You manage to find a house for yourselves. Margaret only felt empty from that point until you were killed by witch hunters.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212121431211123":{
+        "Text": "",
+        "Options":[
+            "To be continued"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221212143121113":{
+        "Text": "'A favor? YOU THINK I WOULD OWE YOU A FAVOR YOU LITTLE -'\nMargaret interrupts her: 'You do owe him a favor. Don't you remember?'\n'O- Of course I remember. What is it the you want?'",
+        "Options":[
+            "To be continued"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221212143121114":{
+        "Text": "'Margaret what?! Oh, that little... I'll call her, wait here just a minute and... POCKET SAND!'\nYou fall to the ground, surprised by the pocket sand.",
+        "Options":[
+            "Get hit on the head with a rock and die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121214312112":{
+        "Text": "'All right! I'll distract them! Just be careful of anything that could trigger a spell.'\nYou start climbing the wall. Suddenly, a strong light envelops you. When you open your eyes, you transformed into a frog.",
+        "Options":[
+            "Death by fall damage."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212121431212":{
+        "Text": "'Really? You ungrateful little;... (sigh) Too bad for you, I'll still need a vessel for the curse.'\nHe throws a rock in your head just strong enough for you to enter a coma",
+        "Options":[
+            "Death by unknown reason"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221212143122":{
+        "Text": "'Well, I'm a good friend of hers! I'll make it up to you in her place!'",
+        "Options":[
+            "To be continued"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212121432":{
+        "Text": "As you explore the cave, you find an agressive looking [rooster]. He kills you before you can even react",
+        "Options":[
+            "End my suffering"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212121433":{
+        "Text": "You wait. Restarting the process from before. Soon after, what could only be described as spider centaurs, rush through the cave. One of these shoots a needle at you. Your consciousness starts to fade.",
+        "Options":[
+            "To be continued (slavery)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222212122":{
+        "Text": "'What a bummer. I'll be leaving you then.'\nShe walks away.",
+        "Options":[
+            "Follow her",
+            "Do not follow her"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0411212222121221":{
+        "Text": "You follow her from afar, eventually reaching her house.",
+        "Options":[
+            "To be continued (I'm really tired from writing all of these)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222121222":{
+        "Text": "You eventually die of too much money.",
+        "Options":[
+            "Eventually die of too much money."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122221213":{
+        "Text": "You make your way back to the cave. As soon as you enter it, you hear a voice echo through the cave.\n'Mr Beast Detected. Initiating I spent 3000 years in a cave protocol.'\nThe floor below you opens as if it was a trapdoor. You fall into a giant slide that leads you into a really luxurious bunker.",
+        "Options":[
+            "Live the rest of your life in Mr Beast's luxurious bunker. (Because you won't make it 3000 years)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222122":{
+        "Text": "As you are about to take Mr Beast's giant sack of cash™, he screams:\n'POCKET SAND!'\nMr Beast throws sand in your eye.",
+        "Options":[
+            "Get hit by Mister Beast's giant sack of cash™ on the head and die."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212222123":{
+        "Text": "'Oh! You really scared me!'\nWhen you turn your back to Mr Beast, he hits you on the head with his sack of cash™",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121222213":{
+        "Text": "'Aah! Here is all my money! Please don't hurt me!'\nHe takes out his pocket a comically large sack of cash™. As you approach to take it you hear Mr Beast scream: 'POCKET SAND!'. He throws sand in your eyes.",
+        "Options":[
+            "Get hit on the head by Mr Beast's comically large sack of cash™ and die."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122222":{
+        "Text": "You try to calm them down but they only seem to get angrier and angrier.",
+        "Options":[
+            "Get beaten to death."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112122223":{
+        "Text": "You misstepped and fell in a trap.",
+        "Options":[
+            "The dev definitively wasn't too lazy to create a whole new story line from here"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212223":{
+        "Text": "You try to punch Mr Beast. Mr Beast's charisma desintegrates you.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0411212224":{
+        "Text": "An Error has occured:\nErrorType: RefusedMrBeastError",
+        "Options":[
+            "Congratulations you crashed the game. Back to the start."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121223":{
+        "Text": "You fall on a trap. I'm sure we've been through this already.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041121224":{
+        "Text": "Before misstepping your way in the cave and dying in a pit trap, you see a carving on the rock:\n'Mr Beast was here'",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04112123":{
+        "Text": "No one wanted to accept you. No one, but a shady old vendor who turned out to be a witch hunting for test subjects.",
+        "Options":[
+            "Test subject ending"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041122":{
+        "Text": "You were caught by a witch and used a test subject by a witch for the rest of your now shortenned life.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0412":{
+        "Text": "You go back and return to the aforementioned waiting cycle. After a few hours you hear a rumbling.",
+        "Options":[
+            "Check the rumbling",
+            "Leave the cave",
+            "Keep waiting"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04121":{
+        "Text": "You follow the rumbling sounds. You see a lobster fighting a statue of Dwayne 'The Rock' Johnson made of rocks.",
+        "Options":[
+            "Help the lobster",
+            "Help the rock The Rock statue"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041211":{
+        "Text": "The lobster looks at you angrily. It transforms into a blue lobster. You are jumpscared by the blue lobster.",
+        "Options":[
+            "Death by blue lobster jumpscare"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041212":{
+        "Text": "You throw a rock at the lobster, flipping it upside down. With that oportunity, the rock The Rock statue crushes it under his foot.\n'Thanks man. Is there anything I can do to you in return before I go back to sleep?'",
+        "Options":[
+            "Ask for an autograph",
+            "Ask for a rock and a stone",
+            "Ask for nothing"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0412121":{
+        "Text": "'Sigh. Really? Alright.'\nHe gives you a stone in which it is written 'From the rock statue of The Rock'\n'If that's all, I'll go back to sleep.'\nThe rock The Rock statue crumbles into pieces, and arranges itself to block the passage.",
+        "Options":[
+            "Go back and wait",
+            "Explore the cave",
+            "Leave the cave"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04121211":{
+        "Text": "You go back, and wait. You wait wait and wait. Nothing happens except the occasional goblin. You keep waiting until your body withers with age.",
+        "Options":[
+            "Death from overwaiting."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04121212":{
+        "Text": "You start exploring the cave. You soon find a [rooster]. The [rooster] seems agressive.",
+        "Options":[
+            "Fight",
+            "Pokemon",
+            "Item",
+            "Run"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "041212121":{
+        "Text": "The [rooster] is too strong for you.",
+        "Options":[
+            "Death by [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041212122":{
+        "Text": "Pokemons aren't real!!!!",
+        "Options":[
+            "Can we get much lower?"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041212123":{
+        "Text": "You use the autograph. The [rooster] stops. The [rooster] looks pleased. The [rooster] stops attacking you.",
+        "Options":[
+            "To be continued (I'm really tired from writing all of these)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "041212124":{
+        "Text": "You are too slow to run from the [rooster].",
+        "Options":[
+            "Death by [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04121213":{
+        "Text": "You leave the cave, or at least you wanted to. You fall in a pit trap because you didn't follow the goblin's movements (easier to remember if you actually do them)",
+        "Options":[
+            "Die (placeholder)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0412122":{
+        "Text": "'You're too late buddy. The Dwarves already left. I can still let you pass if you want, but beware of the Driders'\nYou wish you paid more attention to him. Now you're captured by the Drider (spider people) and you'll be used as a slave for the rest of your life.",
+        "Options":[
+            "Spoilers: That really happens."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0412123":{
+        "Text": "'Sigh. I really don't want to wake up again afterwards, but I'll be here if you need.' The rock The Rock statue crumbles, turning into stones and blocking the path.",
+        "Options":[
+            "Explore the cave",
+            "Leave the cave",
+            "Go back and wait"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04121231":{
+        "Text": "You find a [rooster]. You're killed by the [rooster] no matter what you do",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04121232":{
+        "Text": "You fall in a pit trap in your way out.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04121233":{
+        "Text": "You wait until you die of old age. (Please cut me some slack. It's 2 am)",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04122":{
+        "Text": "You fall in a pit trap. Should've followed the goblin's movements while your memory is still fresh.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04123":{
+        "Text": "You're captured by a race of spider centaurs to be used as a slave.",
+        "Options":[
+            "Eventually die of exhaustion"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "042":{
+        "Text": "You keep waiting. You hear a large rumbling.",
+        "Options":[
+            "Go check the rumbling",
+            "Explore the cave",
+            "Keep waiting"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0421":{
+        "Text": "You witness the combat of a lobster and the rock statue of Dwayne 'The Rock' Johnson",
+        "Options":[
+            "Help the lobster",
+            "Help the rock The Rock statue"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04211":{
+        "Text": "You distract the statue, giving the opportunity for the lobster to finish it off. The lobster turns blue. The lobster jumpscares you.",
+        "Options":[
+            "Die"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04212":{
+        "Text": "You throw a rock at the lobster, flipping it upside down. With that oportunity, the rock The Rock statue crushes it under his foot.\n'Thanks man. Is there anything I can do to you in return before I go back to sleep?'",
+        "Options":[
+            "I want to leave this cave.",
+            "Ask for an autograph",
+            "Ask for a rock and a stone",
+            "Ask for nothing"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "042121":{
+        "Text": "'There you go.'\nHe opens a portal to what appears to be a jungle. When you pass through, unsurprisingly, you find yourself in a jungle",
+        "Options":[
+            "To be continued (jungle)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "042122":{
+        "Text": "'Alright. I expected more but alright. There you go.'\nYou obtain the rock The Rock statue's autograph. The statue returns to its dormant state as a pile of rocks blocking the way.",
+        "Options":[
+            "Explore the cave",
+            "Wait"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "0421221":{
+        "Text": "You explore the cave. You find a [rooster]. The [rooster] is going to kill you for absolutly no reason.",
+        "Options":[
+            "Give the [rooster] the autograph",
+            "Do anything else"
+        ],
+        "Ending": false,
+        "End of the Tutorial": false
+    },
+    "04212211":{
+        "Text": "The [rooster] seems happy. It will no longer murder you. For now.",
+        "Options":[
+            "To be continued"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "04212212":{
+        "Text": "",
+        "Options":[
+            "Die"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0421222":{
+        "Text": "",
+        "Options":[
+            "Wait until you die of old age."
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "042123":{
+        "Text": "'Sorry pal. You're too late. Dwarves already left. I can still let you pass though.'\nYou pass and are captured by spider centaurs and enslaved until the end of your life.",
+        "Options":[
+            "Die of exhaustion (eventually)"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0422":{
+        "Text": "You're killed by a [rooster]. No questions asked.",
+        "Options":[
+            "Death by [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "0423":{
+        "Text": "",
+        "Options":[
+            "Eventually die of old age"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    },
+    "043":{
+        "Text": "You're killed by a [rooster]. No questions asked.",
+        "Options":[
+            "Death by [rooster]"
+        ],
+        "Ending": true,
+        "End of the Tutorial": false
+    }
+}
