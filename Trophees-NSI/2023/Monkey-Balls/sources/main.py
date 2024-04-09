@@ -2,7 +2,7 @@ import pyxel, definitions, cartes, fonctions_aux, round_tourner, niveaux
 
 class App:
     def __init__(self):
-        pyxel.init(256, 128, title="09 Fin")
+        pyxel.init(256, 128, title="Monkey Balls")
         
         self.jeu = False
         self.difficulte = "En attente"
