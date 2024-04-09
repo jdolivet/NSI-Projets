@@ -267,7 +267,7 @@ class App:
                     self.liste_explosions.remove(explosion)
         
     def draw(self):
-        pyxel.load("my_resource.pyxres", True, True, True, True)
+        pyxel.load("my_resource.pyxres", False, False, False, False)
         
         if not self.jeu:
             if self.difficulte == "En attente":
