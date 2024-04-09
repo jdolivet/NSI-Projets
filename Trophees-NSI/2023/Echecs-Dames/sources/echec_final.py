@@ -5,7 +5,7 @@ import pyxel
 pyxel.init(128, 128, title="Échec")
 pyxel.mouse(True)
 
-pyxel.load("my_resource.pyxres", True, True, True, True)
+pyxel.load("my_resource.pyxres", False, False, False, False)
     
 echiquier = [[0] * 8 for loop in range (8)]
 jeu = "en attente"
