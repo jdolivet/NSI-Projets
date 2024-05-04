@@ -141,13 +141,11 @@ def bird_update():
 ecran_larg = 160
 ecran_alt = 120
 pyxel.init(ecran_larg, ecran_alt, title="Flappy Bird, par Manuela et Claire")
-pyxel.load("my_resource.pyxres", True, True, False, False )# chargement des images et des sons
-pyxel.load("my_resource.pyxres", False, False, True, True)
+# chargement des images et des sons
+pyxel.load("my_resource.pyxres", False, False, False, False)
 
 pyxel.playm(0, loop=True) #Lancement de la musique
 
-
-pyxel.load("my_resource.pyxres")
 
 
 # Place l'oiseau exactement au milieu de l'écran
@@ -173,7 +171,7 @@ score = 0         # chaque obstacle vaincu compte un point
 fin_du_jeu = False
 frame_count = 0
 
-pyxel.load("my_resource.pyxres")
+
 
 # loop infinit du pyxel
 pyxel.run(app_update, app_draw)
