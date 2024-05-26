@@ -67,7 +67,7 @@ class Explosion:
             
 class App:
     def __init__(self):
-        pyxel.init(WIDTH, HEIGHT, fps=FPS, title="Nuit du Code. TIR AUX PIGEONS - BALL TRAP")
+        pyxel.init(WIDTH, HEIGHT, fps=FPS, title="TIR AUX PIGEONS - BALL TRAP")
         self.highscore = 0
         # Sky
         pyxel.colors[6] = 0x9BFFFF
