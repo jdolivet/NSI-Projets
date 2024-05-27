@@ -7,6 +7,8 @@ pyxel.load("theme2.pyxres")
 player_x = 64
 player_y = 100
 
+
+
 chaves = 0
 
 
@@ -24,22 +26,22 @@ def mouvement(x, y):
     return x, y
 
 def colision():
-    global player_x, player_y
+    global player_x, player_y, UPDATE, DRAW
     if player_x < 20 + 15 and player_y + 15 > 100  and player_x + 15 > 20 and player_y < 100 + 15:
         player_x = 64
         player_y = 100
-        update, draw = update1, draw1
+        UPDATE, DRAW = update1, draw1
     if player_x < 104 + 15 and player_y + 15 > 80  and player_x + 15 > 104 and player_y < 80 + 15:
         player_x = 64
         player_y = 100
-        update, draw = update2, draw2
+        UPDATE, DRAW = update2, draw2
         return player_x, player_y
 
 def win():
-    global chaves
+    global chaves, UPDATE, DRAW
     if chaves == 2:
         if player_x < 64 + 15 and player_y + 15 > 20  and player_x + 15 > 64 and player_y < 20 + 15:
-            update, draw = update8, draw8
+            UPDATE, DRAW = update8, draw8
 
 def update():
     global player_x, player_y
@@ -97,16 +99,16 @@ def mov_ecout(x, y):
     return x, y
 
 def colision_ecout() :
-    global ecout_x, ecout_y, player_x, player_y, ecout_y
+    global ecout_x, ecout_y, player_x, player_y, ecout_y,UPDATE, DRAW
     if player_x < ecout_x + 15 and player_y + 15 > ecout_y  and player_x + 15 > ecout_x and player_y < ecout_y + 15:
         player_x = 64
         player_y = 120
         ecout_y = 0
-        update, draw = update_w1, draw_w1
+        UPDATE, DRAW = update_w1, draw_w1
         
     if ecout_y == 128 - 4:
         ecout_y = 0
-        update, draw = update4, draw4
+        UPDATE, DRAW = update4, draw4
         
 def update1():
     global player_x, player_y, ecout_y, ecout_x
@@ -144,12 +146,12 @@ key_x = 64
 key_y = 64
 
 def colision_key():
-    global player_x, player_y, chaves
+    global player_x, player_y, chaves,UPDATE, DRAW
     if player_x < key_x + 12 and player_y + key_y  and player_x + 15 > ecout_x and player_y < key_y + 12:
         player_x = 64
         player_y = 100
         chaves += 1
-        update, draw = update, draw
+        UPDATE, DRAW = update, draw
     
 def update_w1():
     global player_x, player_y
@@ -185,14 +187,14 @@ def mov_projetil():
     return projetil_y
 
 def key():
-    global conteur, couleur
+    global conteur, couleur,UPDATE, DRAW
     if conteur == 12:
-        update, draw = update_w1, draw_w1
+        UPDATE, DRAW = update_w1, draw_w1
         
 def colision_mancha():
-    global projetil_y, projetil_x, player_x, player_y
+    global projetil_y, projetil_x, player_x, player_y,UPDATE, DRAW
     if player_x < projetil_x + 15 and player_y + 15 > projetil_y  and player_x + 15 > projetil_x and player_y < projetil_y + 15:
-        update, draw = update7, draw7
+        UPDATE, DRAW = update7, draw7
     
 def colision_projetil():
     global projetil_y, projetil_x, rav, tab_ennemi, conteur
@@ -238,10 +240,10 @@ def draw2():
 # Mapa Game Over
 
 def update7():
-    global player_x, player_y 
+    global player_x, player_y,UPDATE, DRAW
     player_x, player_y = mouvement(player_x, player_y)
     if pyxel.btnp(pyxel.KEY_SPACE):
-        update, draw = update, draw
+        UPDATE, DRAW = update, draw
         
 def draw7():
     pyxel.cls(0)
@@ -250,5 +252,6 @@ def draw7():
     pyxel.text(40, 74, "press SPACE", 0)
     pyxel.text(45, 84, "to restart", 0)
 
-    
-pyxel.run(update, draw)
+UPDATE = update
+DRAW = draw 
+pyxel.run(UPDATE, DRAW)
