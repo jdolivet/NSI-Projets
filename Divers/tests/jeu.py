@@ -7,8 +7,7 @@ pyxel.load("theme2.pyxres")
 player_x = 64
 player_y = 100
 
-UPDATE = update
-DRAW = draw 
+
 
 chaves = 0
 
@@ -253,5 +252,7 @@ def draw7():
     pyxel.text(40, 74, "press SPACE", 0)
     pyxel.text(45, 84, "to restart", 0)
 
+UPDATE = update
+DRAW = draw 
 
 pyxel.run(UPDATE, DRAW)
