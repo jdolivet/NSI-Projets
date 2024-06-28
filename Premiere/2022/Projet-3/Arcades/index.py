@@ -2,7 +2,7 @@ import pyxel, minigame1, minigame2, minigame3 # les fichiers de chaque minigame
 
 pyxel.init(128, 128, title="Projet Tri3")
  
-pyxel.load("final_sprites.pyxres", False, False, False, False) # les graphiques 
+pyxel.load("final_sprites.pyxres", True, True, True, True) # les graphiques 
 
 
 #variables initiale
