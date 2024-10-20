@@ -272,7 +272,7 @@ def gamble(name):
                     if result <= 8:
                         if answer == '1':
                             typewriter(f'Slot Machine> Oh no. YELLOW?! JACKPOT?! You lucky [CHA-CHING]!! Your {goldAmount} gold was increased by 10 times!!')
-                            player_list[name].gain(goldAmount*10)
+                            player_list[name].gain(goldAmount*9)
                             typewriter(f'{name} now has {player_list[name].showGold()}')
                         else:
                             typewriter(f'Slot Machine> Oh no~ It was Yellow! You missed a jackpot! Better luck next time!')
@@ -282,7 +282,7 @@ def gamble(name):
                         result = choice(['2', '3'])
                         if answer == result:
                             typewriter(f'Slot Machine> You win! Congratulations! Your {goldAmount} gold was doubled!')
-                            player_list[name].gain(goldAmount*2)
+                            player_list[name].gain(goldAmount)
                             typewriter(f'{name} now has {player_list[name].showGold()}')
                         else:
                             typewriter(f'Slot Machine> Oh no~ You lost. You lost {goldAmount} gold. Better luck next time.')
@@ -292,7 +292,7 @@ def gamble(name):
                     if answer == '1':
                         if result <= 50:
                             typewriter(f'Slot Machine> YELLOW! JACKPOT! YOUR {-goldAmount} DEBT WAS INCREASED BY 10 TIMES!!!')
-                            player_list[name].gain(goldAmount*10)
+                            player_list[name].gain(goldAmount*9)
                             typewriter(f'{name} now has {player_list[name].showGold()}')
                         else:
                             typewriter(f"Slot Machine> Tsk. It was {choice(['Red', 'Black'])}. You lose {-goldAmount} debt.")
@@ -300,7 +300,7 @@ def gamble(name):
                             typewriter(f'{name} now has {player_list[name].showGold()}')
                     else:
                         if result <= 50:
-                            typewriter(f"Slot Machine> {['YELLOW', 'RED', 'BLACK'][int(answer)]}! YOUR {-goldAmount} DEBT IS DOUBLED!")
+                            typewriter(f"Slot Machine> {['YELLOW', 'RED', 'BLACK'][int(answer)-1]}! YOUR {-goldAmount} DEBT IS DOUBLED!")
                             player_list[name].multiplyGold(2)
                             typewriter(f'{name} now has {player_list[name].showGold()}')
                         else:
@@ -308,7 +308,7 @@ def gamble(name):
                                 answer = 3
                             else:
                                 answer = 2
-                            typewriter(f"Slot Machine> Tsk. It was {['YELLOW', 'RED', 'BLACK'][answer]}. You lose {-goldAmount} debt.")
+                            typewriter(f"Slot Machine> Tsk. It wasn't {['YELLOW', 'RED', 'BLACK'][int(answer)-1]}. You lose {-goldAmount} debt.")
                             player_list[name].gain(-goldAmount)
                             typewriter(f'{name} now has {player_list[name].showGold()}.')
                 input('<Press ENTER to continue>')
