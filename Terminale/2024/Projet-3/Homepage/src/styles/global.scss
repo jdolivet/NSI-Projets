@@ -1,0 +1,40 @@
+@import 'variables';
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: $light-color;
+  color: $dark-color;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $dark-color;
+    color: $light-color;
+  }
+}
+
+html {
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+a {
+  color: $link-dark-color;
+
+  @media (prefers-color-scheme: dark) {
+    color: $link-light-color;
+  }
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

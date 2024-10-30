@@ -1,0 +1,99 @@
+@use "sass:color";
+
+@import '../variables.scss';
+
+$nav-alpha: .5;
+
+
+.header {
+  text-decoration: none;
+
+  color: $dark-color;
+
+  @media (prefers-color-scheme: dark) {
+    color: $light-color;
+  }
+
+  h1 {
+    text-align: center;
+    height: min-content;
+
+    @media screen and (max-width: 400px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.nav:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: calc(4rem + 4rem + 1px);
+  width: 100vw;
+
+  filter: blur(100px);
+
+  box-shadow: inset 0 0 2000px color.change($dark-color, $alpha: $nav-alpha);
+
+  @media (pref650pxers-color-scheme: dark) {
+    box-shadow: inset 0 0 2000px color.change($light-color, $alpha: $nav-alpha);
+  }
+
+  z-index: -10;
+}
+
+.nav {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+
+  height: 4rem;
+
+  width: calc(100vw - 4rem);
+
+  @media screen and (max-width: 650px) {
+    height: 12rem;
+  }
+
+  background-color: color.change($light-color, $alpha: $nav-alpha);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: color.change($dark-color, $alpha: $nav-alpha);
+  }
+
+  div {
+    flex-grow: 1;
+
+
+  }
+
+  ul {
+    display: flex;
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+    }
+
+    width: 40%;
+    justify-content: right;
+
+    li {
+      margin: 1rem;
+      text-align: right;
+      list-style: none;
+
+      @media screen and (max-width: 650px) {
+        font-size: 18px;
+        margin: .75rem;
+      }
+    }
+  }
+
+  border-bottom: 1px solid $dark-color;
+
+  @media (prefers-color-scheme: dark) {
+    border-bottom: 1px solid $light-color;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+
+.h1 {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+
+  transform: translate(-50% -50%);
+
+  color: $light-color;
+
+  @media (prefers-color-scheme: light) {
+    color: $dark-color;
+  }
+
+  user-select: none;
+}

@@ -1,0 +1,28 @@
+@import '../variables';
+
+.tooltip:hover {
+  position: relative;
+
+  &::after {
+    content: attr(data-tooltip);
+    padding: 4px 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    white-space: nowrap;
+    z-index: 20;
+    border-radius: 5px;
+
+
+    color: $dark-color;
+    border: solid 1px $dark-color;
+    background-color: $light-color;
+
+    @media (prefers-color-scheme: dark) {
+      color: $light-color;
+      border: solid 1px $light-color;
+      background-color: $dark-color;
+    }
+  }
+}
