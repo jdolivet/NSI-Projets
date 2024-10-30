@@ -1,0 +1,2554 @@
+<!-- TOP 10 FILMS.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+  /* classe do box para o botão TRACE  */
+  .boxTRACE  /* fundo rosa */ { border: 2px solid #2c4c11; padding: 5px; display:block;
+            background-color: #8EC3E6; width: 100px; 
+            position: fixed;     bottom: 20px;  right: 200px;  
+            margin: 1px auto;  text-align: center; }
+
+  /* Button padrão fundo */
+  button {   border: 2px solid #2c4c11; padding: 10px 20px;
+            font-size: 15px;  color: white;  border-style:outset;
+            background-color:#6495ED; border: none;
+            border-radius: 5px; cursor: pointer;  }
+  /* .... sob o cursor fundo fica azulzinho */
+  button:hover {    background-color: #8EC3E6;     }
+
+  /* classes para box dos menus outra cor*/
+  .box { border: 2px solid #ECC6FF; padding: 20px; display: none;
+            background-color: #ECC6FF; width: 450px;  height:330px;
+            margin: 20px auto;  text-align: left; }
+  .boxMENU { border: 2px solid #2c4c11; padding: 20px; display: block;
+            background-color: #ECC6FF; width: 450px; height: 330px;
+            margin: 20px auto;  text-align: center; }
+
+  /* classes para box do player de som fundo azulzinho */
+  .boxsom3 { border: 2px solid #2c4c11; padding: 20px; display: none;
+            background-color: #8EC3E6; width: 300px;  height:100px;
+            position: fixed;  top: 70px; right: 75px; z-index:3;
+            margin: 20px auto;  text-align: center; }
+
+  .boxsom4 { border: 2px solid #2c4c11; padding: 20px; display: none;
+            background-color: #8EC3E6; width: 300px;  height:100px;
+            position: fixed;  top: 70px; right: 147px; z-index:3;
+            margin: 20px auto;  text-align: center; }
+
+  /* classes para box da surpresa  fundo */
+  .boxsurpr { border: 2px solid #2c4c11; padding: 20px;
+            background-color: #ECC6FF; width: 450px; height: 330px;
+            display: none;
+            position: fixed;  top: 20px; right:390px; z-index: 2;
+            margin: 1px auto;  text-align: center; }
+
+  .boxvazio { border: 2px solid #2c4c11; padding: 20px; z-index:3;
+            background-color: #ECC6FF; width: 450px; height: 330px;
+            display: none;
+            position: fixed;  top: 20px; right:139px; z-index: 2;
+            margin: 1px auto;  text-align: center; }
+
+  /* classes para box de mensagens fixo no rodapé */
+  .boxmsg { border: 2px solid #2c4c11; padding: 5px; display: none;
+            background-color: #8EC3E6; width: 220px; z-index:4;
+            margin: 5px auto;  text-align: center; 
+            position: fixed;  bottom: 350px; right: 250px; }
+
+  /* classe do box para o button sair, fixo em baixo esquerda  */
+  .botSAIR  /* fundo azul claro */ { border: 2px solid #2c4c11;
+            background-color: #8EC3E6; width: 80px;  font-size: 17px;
+            border-style:outset; padding: 10px; display:block;
+            position: fixed;  flex-direction: column; /* Disposição dos botões na vertical */
+            bottom:62px;  left: 385px; 
+            margin: 20px auto;  text-align: center; }
+
+  /* classe do box para o botão voltar, fixo em baixo direita  */
+  .botVOLTAR  /* fundo azul */ { border: 2px solid #2c4c11; 
+            background-color: #8EC3E6; width: 80px; 
+            border-style:double; padding: 10px; display:block;
+            position: fixed;  flex-direction: column; /* Disposição dos botões na vertical */
+            bottom: 61px; right: 385px; 
+            margin: 20px auto;  text-align: center; }
+
+    /* classe do box do texto fixo no rodapé  */
+   .rodapé  /* fundo areia rosada */ { border: 2px solid #2c4c11; display:block;
+            background-color: #efe5da; width: 485px; font-size: 13px;  color: black;   
+            position: fixed;  bottom: 20px; left: 50%; 
+            transform: translateX(-50%); /* Move o elemento para o centro */
+            margin: 1px auto;  text-align: center; }
+
+    /* classe para box do nome do filme */
+  .boxnome  /* fundo lilas clarinho */ { border: 2px solid #2c4c11; display:none;
+            background-color: #E6D9EC; width: 490px; font-size: 18px;  color: black;   
+            position: fixed;  top: 134px; right:150px;z-index: 3;
+             margin: 1px auto;  text-align: center; }
+
+  .boxnom3 /* fundo lilas clarinho */ { border: 2px solid #2c4c11; display:none;
+            background-color: #E6D9EC; width: 490px; font-size: 18px;  color: black;   
+            position: fixed;  top: 20px; right:390px; z-index: 3;
+             margin: 1px auto;  text-align: center; }
+
+  .boxnom4 /* fundo lilas clarinho */ { border: 2px solid #2c4c11; display:none;
+            background-color: #E6D9EC; width: 490px; font-size: 18px;  color: black;   
+            position: fixed;  top: 20px; right:139px; z-index: 3;
+             margin: 1px auto;  text-align: center; }
+
+ 
+   /* classe do box do resumo do filme */
+  .boxres   /* fundo azul */ { border: 2px solid #2c4c11;
+             background-color: #48c8f2; width: 485px; height:330;
+             padding: 5px; display: none; font-size: 18px;  color: black; 
+             position: fixed;  bottom: 314px; right: 130px; z-index: 3;
+              margin: 1px auto;  text-align: justify; }
+
+
+   /* classe do box do resumo do filme */
+  .boxres3   /* fundo azul */ { border: 2px solid #2c4c11; top:0;
+             background-color: #48c8f2; width: 485px; height:330;
+             padding: 5px; display: none; font-size: 18px;  color: black; 
+             position: fixed;  top: 300px; right: 388px; z-index: 3;
+              margin: 1px auto;  text-align: left; }
+
+   /* classe do box do resumo do filme */
+  .boxres4   /* fundo azul */ { border: 2px solid #2c4c11; top:0;
+             background-color: #48c8f2; width: 485px; height:330;
+             padding: 5px; display: none; font-size: 18px;  color: black; 
+             position: fixed;  top: 300px; right: 138px; z-index: 3;
+              margin: 1px auto;  text-align: left; }
+
+ 
+  
+  /* classes para box do music player  fundo verde claro */
+  .boxpos3 { border: 2px solid #2c4c11; padding: 5px; display: none;
+            background-color: #c2fd92; width: 200px;  height:200px;
+            position: fixed;  top: 80px; left: 388px; z-index: 3;
+            margin: 5px auto;  text-align: center; }
+
+  /* classes para box do music player  fundo verde claro usado em video */
+  .boxpos4 { border: 2px solid #2c4c11; padding: 5px; display: none;
+            background-color: #c2fd92; width: 200px;  height:200px;
+            position: fixed;  top: 80px; left: 653px; z-index: 3;
+            margin: 5px auto;  text-align: center; }
+
+  /* classes para box do music player  fundo verde claro usado em Resumo10 */
+  .boxpos5 { border: 2px solid #2c4c11; padding: 5px; display: none;
+            background-color: #c2fd92; width: 200px;  height:200px;
+            position: fixed;  top: 80px; right:150px; z-index: 3;
+            margin: 5px auto;  text-align: center; }
+
+
+  /* classes para box do player de som fundo verde claro */
+  .boxsom3 { border: 2px solid #2c4c11; padding: 20px; display: none;
+            background-color: #c2fd92; width: 250px;  height:100px;
+            position: fixed;  top: 70px; right:410px; z-index: 3; 
+            margin: 20px auto;  text-align: center; }
+
+
+   /* classe do box fundo da ce que tes choix disent de toi */
+  .fundoAVAL /* fundo verde claro */{ border: 2px solid #2c4c11; padding: 20px; display: none;
+            background-color: #c2fd92; width: 450px;  height:330px;
+            position: fixed;  top: 20px; right:390px; z-index: 3;
+            margin: 1px auto;  text-align: center; }
+
+  .boxAVAL   /* fundo azul */ { border: 2px solid #2c4c11;
+             background-color: #48c8f2; width: 420px; height:330;
+             padding: 20px; display: none; font-size: 18px;  color: black; 
+             position: fixed;  top: 160px; left:400px; z-index: 4;
+              margin: 1px auto;  text-align: justify; }
+
+  .avalBOT /* fundo azul  */{ border: 2px solid #2c4c11;  padding: 5px 20px;
+            background-color:#48c8f2;  width: 250px; display: inline-block;
+            position: fixed; bottom: 80px; left: 469px; z-index: 5;
+            font-size: 15px;  color: white;   margin: 10px   20px }
+
+
+  /* classe do box para o botão surpresa  */
+  .surpresa  /* fundo azul*/ { border: 2px solid #2c4c11; padding: 5px; display:block;
+            background-color: #8EC3E6; width: 150px; 
+            position: fixed;  flex-direction: column; /* Disposição dos botões na vertical */
+            bottom: 95px;  right: 150px;  
+            margin: 1px auto;  text-align: center; }
+
+   /* box do video botões com fundo vermelho claro */
+  .videoBOT { border: 2px solid #2c4c11; padding: 5px; display: none;
+            background-color: #de8b6f; width: 350px; z-index: 5;
+            margin: 5px auto;  text-align: center; 
+            position: fixed;  bottom: 220px; right: 450px; }
+  
+  .likeBOT /* fundo amarelo  */ { border: 2px solid #2c4c11;  padding: 5px 20px;
+            background-color:#ffff33;  width: 40px; display: none;
+            position: fixed; bottom: 55px; left: 220px; z-index: 5;
+            font-size: 15px;  color: red;   margin: 200px ;  }
+ 
+  .likeCORp { width: 50px; height: 50px; display: block;
+              position: fixed; bottom: 120px; left: 295px; z-index:5;
+              font-size: 15px;  color: white;   margin: 1px ;  }
+
+
+  
+  .like01  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 80px; left: 395px;}
+  .like02  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 100px; left: 395px;}
+  .like03  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 120px; left: 395px;}
+  .like04  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 140px; left: 395px;}
+  .like05  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 160px; left: 395px;}
+  .like06  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 180px; left: 395px;}
+  .like07  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 200px; left: 395px;}
+  .like08  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 220px; left: 395px;}
+  .like09  {display: block;  font-size: 25px;  color: red;
+            position: fixed; top: 240px; left: 395px;}
+  .like10   {display: block; font-size: 25px;  color: red;
+            position: fixed; bottom: 260px; left: 395px;
+               margin: 2px ;  }
+
+  .lkp01  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 147px; left: 449px;}
+  .lkp02  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 147x; left: 595px;}
+  .lkp03  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 147px; left: 730px;}
+  .lkp04  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 218px; left: 449px;}
+  .lkp05  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 218px; left: 595px;}
+  .lkp06  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 218px; left: 730px;}
+  .lkp07  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 290px; left: 495px;}
+  .lkp08  {display: block;  font-size: 15px;  color: red;
+            position: fixed; top: 290px; left: 650px;}
+ 
+
+  /* Container para o vídeo */
+  .video-container {
+            margin: 20px auto; /* Adiciona espaço ao redor do vídeo */
+            max-width: 640px;
+            position: fixed; bottom: 220px; right: 450px; }
+
+  .button1 /* fundo 1  */{ border: 2px solid #2c4c11;  padding: 5px 20px;
+            background-color:#8EC3E6;  width: 80px; display: inline-block;
+            font-size: 15px;  color: white;   margin: 10px   20px }
+  .button2 /* fundo 2  */ { border: 2px solid #2c4c11;  padding: 5px 20px;
+            background-color:#8EC3E6;  width: 80px; display: inline-block;
+            font-size: 15px;  color: white;   margin: 2px ;  }
+  .button3 /* fundo 3  */{ border: 2px solid #2c4c11;  padding: 5px 20px;
+            background-color:#8EC3E6;  width: 80px; display: inline-block;
+            font-size: 15px;  color: white;   margin: 2px ;  }
+  .button4 /* fundo 4  */{ border: 2px solid #2c4c11;  padding: 5px 20px;
+            background-color:#8EC3E6;  width:150px; display: inline-block;
+            font-size: 15px;  color: white;   margin: 2px ;  }
+
+ 
+  body { font-family: Arial, sans-serif; text-align: center; }
+ header, section, footer { margin: 20px; color: blue }
+</style>
+
+</head>
+
+
+
+<body>
+
+</section>
+
+
+
+<!-- Menu inicial NOMES Das PESSOAS ==================================================== -->
+
+<section { id="menu01" class="boxMENU" }>
+
+ <h1>Projet NSI - top 10 films</h1>
+ <div class="button1"> <button onclick="trocar('menu01','fm01')">Manuela</button> </div>
+ <div class="button2"> <button onclick="trocar('menu01','fm02')">Claire</button> </div>
+ <div class="button3"> <button onclick="trocar('menu01','fm03')">Chloé</button> </div>
+ <div class="button1"> <button onclick="trocar('menu01','fm04')">Gabi</button> </div>
+ <div class="button3"> <button onclick="trocar('menu01','fm06')">João</button> </div>
+ <div class="button3"> <button onclick="trocar('menu01','fm07')">Ana</button> </div>
+ <div class="button1"> <button onclick="trocar('menu01','fm08')">Louis</button> </div>
+
+ <div class="button4"> <button onclick="trocar('menu01','selec')">TOP dos TOPS</button> </div>
+ <br>
+
+ <br>
+ </section>
+
+<!-- MENU DOS FILMES TOP 10----------------------------------- -->
+
+<section id="selec" class="box">
+
+<h1>TOP 10</h1>
+<h3>Choisissez le meilleur de tous</h3>
+    <form>
+        <input type="radio" id="t01" name="form00" value="101">
+        <label for="t01">Witness for the Prosecution 1957</label><br>
+
+        <input type="radio" id="t02" name="form00" value="201">
+        <label for="t02">Vertigo 1958</label><br>
+
+        <input type="radio" id="t03" name="form00" value="301">
+        <label for="t03">Divergent 2014</label><br>
+
+        <input type="radio" id="t04" name="form00" value="401>
+        <label for="t04">The Grand Budapest Hotel 2014</label><br>
+
+        <input type="radio" id="t06" name="form00" value="601">
+        <label for="t06">Creature from the Black Lagoon 1954</label><br>
+
+        <input type="radio" id="t07" name="form00" value="701">
+        <label for="t07">The High Sign 1921</label><br>
+
+        <input type="radio" id="t08" name="form00" value="801">
+        <label for="t08">All Quiet on the Western Front 2023</label><br><br>
+
+        <button type="button" onclick='Resumo10("selec","form00","msg000")'>Resumo</button>
+        <button type="button" onclick='IMDB10("selec","form00","msg000")'>IMDB</button><br><br>
+    </form>
+
+  </section>
+
+<!-- Pagina dos likes -------------------------------------------------- -->
+
+<button id="botLK" class="likeBOT" style="position: fixed;
+        z-index:5;" onclick='Like00()'>&#128077;</button>
+
+
+<section id="likef" >
+<div id="lk01" class="like01" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk02" class="like02" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk03" class="like03" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk04" class="like04" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk05" class="like05" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk06" class="like06" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk07" class="like07" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk08" class="like08" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk09" class="like09" style="display: none;"><p>&hearts;</p> </div>
+<div id="lk10" class="like10" style="display: none;"><p>&hearts;</p> </div>
+
+</section>
+
+<section id="likesP" >
+<div id="lkp01" class="lkp01" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp02" class="lkp02" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp03" class="lkp03" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp04" class="lkp04" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp05" class="lkp05" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp06" class="lkp06" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp07" class="lkp07" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp08" class="lkp08" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp09" class="lkp09" style="display: none;"><p>&hearts;</p> </div>
+<div id="lkp10" class="lkp10" style="display: none;"><p>&hearts;</p> </div>
+
+</section>
+
+
+<!-- MENU DOS FILMES da Manuela ----------------------------------- -->
+
+<section id="fm01" class="box" >
+
+    <h1>Top 10 Films de Manuela</h1>
+    <form>
+        <input type="radio" id="01" name="form10" value="101">
+        <label for="01">Witness for the Prosecution 1957</label><br>
+
+        <input type="radio" id="02" name="form10" value="102">
+        <label for="02">Marie Antoinette 2006</label><br>
+
+        <input type="radio" id="03" name="form10" value="103">
+        <label for="03">The Wizard of Oz 1937</label><br>
+
+        <input type="radio" id="04" name="form10" value="104">
+        <label for="04">Breakfast at Tiffany's 1961</label><br>
+
+        <input type="radio" id="05" name="form10" value="105">
+        <label for="05">Singin' in the Rain 1952</label><br>
+
+        <input type="radio" id="06" name="form10" value="106">
+        <label for="06">Priscilla 2023</label><br>
+
+        <input type="radio" id="07" name="form10" value="107">
+        <label for="07">Gone with the Wind 1939</label><br>
+
+        <input type="radio" id="08" name="form10" value="108">
+        <label for="08">Poor Things 2023</label><br>
+
+        <input type="radio" id="09" name="form10" value="109">
+        <label for="09">The Wolf of Wall Street 2013</label><br>
+
+        <input type="radio" id="10" name="form10" value="110">
+        <label for="10">Chicago 2002</label><br><br>
+
+        <button type="button" onclick="Resumo10('fm01','form10','msg100')">Resumo</button>
+        <button type="button" onclick="IMDB10('fm01','form10','msg100')">IMDB</button>
+    </form>
+
+</section>
+
+<!-- MENU DOS FILMES da Claire ----------------------------------- -->
+
+<section id="fm02" class="box">
+
+    <h1>Top 10 Films de Claire</h1>
+    <form>
+        <input type="radio" id="f201" name="form20" value="201">
+        <label for="f201">Vertigo 1958</label><br>
+
+        <input type="radio" id="f202" name="form20" value="202">
+        <label for="f202">Psycho 1960</label><br>
+
+        <input type="radio" id="f203" name="form20" value="203">
+        <label for="f203">The Sound of Music 1965</label><br>
+
+        <input type="radio" id="f204" name="form20" value="204">
+        <label for="f204">Home Alone 1990</label><br>
+
+        <input type="radio" id="f205" name="form20" value="205">
+        <label for="f205">The Parent Trap 1998</label><br>
+
+        <input type="radio" id="f206" name="form20" value="206">
+        <label for="f206">Moulin Rouge 2001</label><br>
+
+        <input type="radio" id="f207" name="form20" value="207">
+        <label for="f207">Eternal Sunshine of the Spotless Mind 2004</label><br>
+
+        <input type="radio" id="f208" name="form20" value="208">
+        <label for="f208">Mamma Mia 2008</label><br>
+
+        <input type="radio" id="f209" name="form20" value="209">
+        <label for="f209">Just Go with It 2011</label><br>
+
+        <input type="radio" id="f210" name="form20" value="210">
+        <label for="f210">Vivre Sa Vie 1962</label><br><br>
+
+        <button type="button" onclick="Resumo10('fm02', 'form20', 'msg100')">Resumo</button>
+        <button type="button" onclick="IMDB10('fm02', 'form20','msg100')">IMDB</button>
+    </form>
+
+</section>
+
+<!-- MENU DOS FILMES da Chloé ----------------------------------- -->
+
+<section id="fm03" class="box">
+
+    <h1>Top 10 Films de Chloé</h1>
+    <form>
+        <input type="radio" id="f301" name="form30" value="301/tt1840309/">
+        <label for="f301">Divergent 2014</label><br>
+
+        <input type="radio" id="f302" name="form30" value="302/tt0892318/">
+        <label for="f302">Letters to Juliet 2010</label><br>
+
+        <input type="radio" id="f303" name="form30" value="303/tt1893273/">
+        <label for="f303">The Last Letter from Your Lover 2021</label><br>
+
+        <input type="radio" id="f304" name="form30" value="304/tt0251127/">
+        <label for="f304">How to Lose a Guy in 10 Days 2003</label><br>
+
+        <input type="radio" id="f305" name="form30" value="305/tt2674426/">
+        <label for="f305">Me Before You 2016</label><br>
+
+        <input type="radio" id="f306" name="form30" value="306/tt0454945/">
+        <label for="f306">She's The Man 2006</label><br>
+
+        <input type="radio" id="f307" name="form30" value="307/tt0147800/">
+        <label for="f307">10 Things I Hate About You 1999</label><br>
+
+        <input type="radio" id="f308" name="form30" value="308/tt2203939/">
+        <label for="f308">The Other Woman 2014</label><br>
+
+        <input type="radio" id="f309" name="form30" value="309/tt0125439/">
+        <label for="f309">Notting Hill 1999</label><br>
+
+        <input type="radio" id="f310" name="form30" value="310/tt1041829/">
+        <label for="f310">The Proposal 2009</label><br><br>
+
+        <button type="button" onclick="Resumo10('fm03', 'form30','msg100')">Resumo</button>
+        <button type="button" onclick="IMDB10('fm03', 'form30','msg100')">IMDB</button>
+    </form>
+</section>
+
+<!-- MENU DOS FILMES da Gabi ----------------------------------- -->
+
+<section id="fm04" class="box" >
+
+    <h1>Top 10 Films de Gabi</h1>
+    <form>
+        <input type="radio" id="f401" name="form40" value="401/tt2278388/">
+        <label for="f401">The Grand Budapest Hotel 2014</label><br>
+
+        <input type="radio" id="f402" name="form40" value="402/tt1375666/">
+        <label for="f402">⁠Inception 2010</label><br>
+
+        <input type="radio" id="f403" name="form40" value="403/tt0361748/">
+        <label for="f403">⁠Inglorious Basterds 2009</label><br>
+
+        <input type="radio" id="f404" name="form40" value="404/tt0070047/">
+        <label for="f404">The Exorcist 1973</label><br>
+
+        <input type="radio" id="f405" name="form40" value="405/tt0816692/">
+        <label for="f405">Interstellar 2014</label><br>
+
+        <input type="radio" id="f406" name="form40" value="406/tt0102926/">
+        <label for="f406">The Silence of the Lambs 1991</label><br>
+
+        <input type="radio" id="f407" name="form40" value="407/tt0347149/">
+        <label for="f407">Howl's Moving Castle 2004</label><br>
+
+        <input type="radio" id="f408" name="form40" value="408/tt0081505/">
+        <label for="f408">The Shining 1980</label><br>
+
+        <input type="radio" id="f409" name="form40" value="409/tt0339291/">
+        <label for="f409">Lemony Snicket's A Series of Unfortunate Events 2004</label><br>
+
+        <input type="radio" id="f410" name="form40" value="410/tt0047396/">
+        <label for="f410">Rear Window 1954</label><br>
+
+        <br>
+
+        <button type="button" onclick="Resumo10('Gabi', 'form40','msg100')">Resumo</button>
+        <button type="button" onclick="IMDB10('Gabi', 'form40','msg100')">IMDB</button>
+    </form>
+
+</section>
+
+<!-- MENU DOS FILMES do João ----------------------------------- -->
+
+<section id="fm06" class="box">
+
+    <h1>Top 10 Films de João</h1>
+    <form>
+        <input type="radio" id="f601" name="form60" value="601">
+        <label for="f601">Creature from the Black Lagoon 1954</label><br>
+
+        <input type="radio" id="f602" name="form60" value="602/tt0110912/">
+        <label for="f602">Pulp Fiction 1994</label><br>
+
+        <input type="radio" id="f603" name="form60" value="603/tt0059260/">
+        <label for="f603">Help 1965</label><br>
+
+        <input type="radio" id="f604" name="form60" value="604/tt0059260/">
+        <label for="f604">Georgy Girl 1966</label><br>
+
+        <input type="radio" id="f605" name="form60" value="605/tt0058182/">
+        <label for="f605">A Hard Day' Night 1964</label><br>
+
+        <input type="radio" id="f606" name="form60" value="606tt8079248/">
+        <label for="f606">Yesterday 2019</label><br>
+
+        <input type="radio" id="f607" name="form60" value="607/tt0068473/">
+        <label for="f607">Deliverance 1972</label><br>
+
+        <input type="radio" id="f608" name="form60" value="608/tt0070328/">
+        <label for="f608">Live and Let Die 1973</label><br>
+
+        <input type="radio" id="f609" name="form60" value="609/tt0064665/">
+        <label for="f609">Midnight Cowboy 1969</label><br>
+
+        <input type="radio" id="f610" name="form60" value="610/tt0388667/">
+        <label for="f610">Kelly's Heroes 1970</label><br><br>
+
+        <button type="button" onclick="Resumo10('fm06', 'form60','msg100')">Resumo</button>
+        <button type="button" onclick="IMDB10('fm06', 'form60','msg100')">IMDB</button>
+    </form>
+
+</section>
+
+<!-- MENU DOS FILMES da Ana ----------------------------------- -->
+
+<section id="fm07" class="box">
+
+    <h1>Top 10 Films de Ana</h1>
+    <form>
+        <input type="radio" id="f701" name="form70" value="701">
+        <label for="f701">The High Sign 1921</label><br>
+
+        <input type="radio" id="f702" name="form70" value="702">
+        <label for="f702">The Man Who Knew Too Much 1956</label><br>
+
+        <input type="radio" id="f703" name="form70" value="703">
+        <label for="f703">Down by Law 1986</label><br>
+
+        <input type="radio" id="f704" name="form70" value="704">
+        <label for="f704">Matchstick Men 2003</label><br>
+
+        <input type="radio" id="f705" name="form70" value="705">
+        <label for="f705">O Xangô de Baker Street 2001</label><br>
+
+        <input type="radio" id="f706" name="form70" value="706">
+        <label for="f706">Monty Python's Life of Brian 1979</label><br>
+
+        <input type="radio" id="f707" name="form70" value="707">
+        <label for="f707">L'Armata Brancaleone 1966</label><br>
+
+        <input type="radio" id="f708" name="form70" value="708">
+        <label for="f708">Blue Velvet 1986</label><br>
+
+        <input type="radio" id="f709" name="form70" value="709">
+        <label for="f709">La Valleé 1972</label><br>
+
+        <input type="radio" id="f710" name="form70" value="710">
+        <label for="f710">A Clockwork Orange 1971</label><br><br>
+
+        <button type="button" onclick="Resumo10('fm07', 'form70','msg100')">Resumo</button>
+        <button type="button" onclick="IMDB10('fm07', 'form70','msg100')">IMDB</button>
+    </form>
+</section>
+
+
+<!-- MENU DOS FILMES do Louis ----------------------------------- -->
+
+<section id="fm08" class="box" >
+
+    <h1>Top 10 Films de Louis</h1>
+    <form>
+        <input type="radio" id="f801" name="form80" value="801">
+        <label for="f801">All Quiet on the Western Front 2023</label><br>
+
+        <input type="radio" id="f802" name="form80" value="802">
+        <label for="f802">Dune Part Two 2024</label><br>
+
+        <input type="radio" id="f803" name="form80" value="803">
+        <label for="f803">The Lord of the Rings The Return of the King 2003</label><br>
+
+        <input type="radio" id="f804" name="form80" value="804">
+        <label for="f804">The Lord of the Rings The Fellowship of the Ring</label><br>
+
+        <input type="radio" id="f805" name="form80" value="805">
+        <label for="f805">The Lord of the Rings The Two Towers 2002</label><br>
+
+        <input type="radio" id="f806" name="form80" value="806">
+        <label for="f806">Star Wars III Revenge of the Sith 2002</label><br>
+
+        <input type="radio" id="f807" name="form80" value="807">
+        <label for="f807">Saving Private Ryan 1998</label><br>
+
+        <input type="radio" id="f808" name="form80" value="808">
+        <label for="f808">Rocky 1976</label><br>
+
+        <input type="radio" id="f809" name="form80" value="809">
+        <label for="f809">1917 2019</label><br>
+
+        <input type="radio" id="f810" name="form80" value="810">
+        <label for="f810">Cidade de Deus 2009</label><br><br>
+
+        <button type="button" onclick="Resumo10('fm08','form80','msg100')">Resumo</button>
+        <button type="button" onclick="IMDB10('fm08','form80','msg100')">IMDB</button>
+    </form>
+
+</section>
+
+<!-- Página do vídeo ----------------------------------- -->
+
+<section id="surp00" class="boxsurpr">
+
+<h3>Surprise!</h3>
+
+  
+<video width="160" height="90" controls><br><br>
+    <source src="Sequence 02.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<h3> Je peut t'indiquer un film? <h3> 
+
+<button type="button" onclick='video001("surp00","menu01")'>Resumo</button>
+<button type="button" onclick='IMDB002("surp00","menu01","tt0388667")'>IMDB</button>
+</section>
+
+
+<section id="nom2000" class="boxnome";>
+    <p>The 2000 Year Old Man 1975</p> </section>
+
+<div id="r2000" class="boxres">
+    <p>A reporter interviews a man that claims to be 2000 years old.</p>
+   </div>
+
+<section id="img2000" class="box";>
+    <img src="P-The 2000 Year Old Man 1975.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section >
+    <audio id="som2000" class="boxsom3" controls>
+        <source src="Marvin Hamlisch - The Entertainer.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section id="nomPRI" class="boxnome";>
+    <p>The Adventures of Priscilla, Queen of the Desert 1994</p> </section>
+
+    <div id="rPRI" class="boxres">
+        <p> Romantic comedy about 3 drag queens that travel the australian desert on a bus
+ called "Priscila" to do shows.</p>
+    </div>
+
+<section id="imgPRI" class="box";>
+    <img src="P-The Adventures of Priscilla, Queen of the Desert 1994.jpg" alt="falhou" width="200" height="200">
+</section>
+
+<section >
+    <audio id="somPRI" class="boxsom3" controls>
+        <source src="Gloria Gaynor - Will Survive.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+
+
+
+<!-- Página da surpresa----------------------------------- -->
+
+<section id="vazio" class="boxsurpr">
+
+    <p>    <p>
+  </section>
+
+<section id="surp01" class="boxsurpr">
+
+<h3>Surprise!</h3>
+  
+    <h3> Je m'appelle Manuela<h3>
+    <h3> Et si j'étais toi <h3>
+    <h3> je regarderai ce film incroyable. <h3> 
+
+    <button type="button" onclick='Srp000("surp01","menu01")'>Resumo</button>
+    <button type="button" onclick='IMDB200("surp01","menu01")'>IMDB</button><br><br>
+    <p>    <p>
+  </section>
+
+<section id="surp02" class="boxsurpr">
+
+
+  
+    <h1> Je m'appelle Claire.<h1>
+    <h2> Et t'a vu ce filme "Priscilla 2023" sur la liste deManuela? <h2>
+    <h2> C'est un erreur, le film qu'elle aime vraiment c'est cela. 
+         Il a une chanson incroyable qui s'appelle I Will Survive.<h2> 
+
+    <button type="button" onclick='Clr001("surp02","menu01")'>Resumo</button>
+    <button type="button" onclick='IMDB002("surp02","menu01","tt0109045")'>IMDB</button><br><br>
+    <p>    <p>
+  </section>
+
+<section id="surp06" class="boxsurpr">
+
+    <h1> Je m'appelle João.</h1>
+    <h2> Je peut t'indiquer un filme magnifique?</h2>
+ 
+
+    <button type="button" onclick='Jol001("surp06","menu01")'>Resumo</button>
+    <button type="button" onclick='IMDB002("surp06","menu01","tt8079248")'>IMDB</button><br><br>
+    <p>    <p>
+  </section>
+
+<section id="surpr09" class="boxsurpr">
+
+    <p id="srn1"> Salutt, je m'appelle</p><br>
+    <p> Et ce film est sur la liste de une</p>
+    <p id="srn2"> personne qui s'appelle </p>
+    <p> Elle a un goût horrible pour le cinema,</p>
+    <p> Mais celui je recommande.</p><br>
+
+    <button type="button" onclick='Sur001("surpr09","menu01")'>Resumo</button>
+    <button type="button" onclick='IMDB200("surpr09","menu01")'>IMDB</button><br><br>
+    <p>    <p>
+  </section>
+ >
+
+<!-- NOMES DOS FILMES da Manuela ----------------------------------- -->
+
+<section id="nom101" class="boxnome";>
+    <p>Witness for the Prosecution 1957</p> </section>
+<section id="nom102" class="boxnome";>
+    <p>Marie Antoinette 2006.</p> </section>
+<section id="nom103" class="boxnome";>
+    <p>The Wizard of Oz 1939</p> </section>
+<section id="nom104" class="boxnome";>
+    <p>Breakfast at Tiffany's 1961</p> </section>
+<section id="nom105" class="boxnome";>
+    <p>Singin' in the Rain 1952</p> </section>
+<section id="nom106" class="boxnome";>
+    <p>Priscilla 2023</p> </section>
+<section id="nom107" class="boxnome";>
+    <p>Gone with the Wind 1939</p> </section>
+<section id="nom108" class="boxnome";>
+    <p>Poor Things 2023</p> </section>
+<section id="nom109" class="boxnome";>
+    <p>The Wolf of Wall Street 2013</p> </section>
+<section id="nom110" class="boxnome";>
+    <p>Chicago 2002</p> </section>
+
+<!-- NOMES DOS FILMES da Claire ----------------------------------- -->
+<section id="nom201" class="boxnome";>
+    <p>Vertigo 1958</p> </section>
+<section id="nom202" class="boxnome";>
+    <p>Psycho 1960</p> </section>
+<section id="nom203" class="boxnome";>
+    <p>The Sound of Music 1965</p> </section>
+<section id="nom204" class="boxnome";>
+    <p>Home Alone 1990</p> </section>
+<section id="nom205" class="boxnome";>
+    <p>The Parent Trap 1998</p> </section>
+<section id="nom206" class="boxnome";>
+    <p>Moulin Rouge 2001</p> </section>
+<section id="nom207" class="boxnome";>
+    <p>Eternal Sunshine of the Spotless Mind 2004</p> </section>
+<section id="nom208" class="boxnome";>
+    <p>Mamma Mia 2008</p> </section>
+<section id="nom209" class="boxnome";>
+    <p>Just Go with It 2011</p> </section>
+<section id="nom210" class="boxnome";>
+    <p>Vivre Sa Vie 1962</p> </section>
+
+<!-- NOMES DOS FILMES da Chloé ----------------------------------- -->
+<section id="nom301" class="boxnome";>
+    <p>Divergent 2014</p> </section>
+<section id="nom302" class="boxnome";>
+    <p>Letters to Juliet 2010<</p> </section>
+<section id="nom303" class="boxnome";>
+    <p>The Last Letter from Your Lover 2021</p> </section>
+<section id="nom304" class="boxnome";>
+    <p>How to Lose a Guy in 10 Days 2003</p> </section>
+<section id="nom305" class="boxnome";>
+    <p>Me Before You 2016</p> </section>
+<section id="nom306" class="boxnome";>
+    <p>She's The Man 2006</p> </section>
+<section id="nom307" class="boxnome";>
+    <p>10 Things I Hate About You 1999</p> </section>
+<section id="nom308" class="boxnome";>
+    <p>The Other Woman 2014</p> </section>
+<section id="nom309" class="boxnome";>
+    <p>Notting Hill 1999</p> </section>
+<section id="nom310" class="boxnome";>
+    <p>The Proposal 2009</p> </section>
+
+<!-- NOMES DOS FILMES da Gabi ----------------------------------- -->
+<section id="nom401" class="boxnome";>
+    <p>The Grand Budapest Hotel 2014</p> </section>
+<section id="nom402" class="boxnome";>
+    <p>⁠Inception 2010</p> </section>
+<section id="nom403" class="boxnome";>
+    <p>The Inglorious Basterds 2009</p> </section>
+<section id="nom404" class="boxnome";>
+    <p>The Exorcist 1973</p> </section>
+<section id="nom405" class="boxnome";>
+    <p>Interstellar 2014</p> </section>
+<section id="nom406" class="boxnome";>
+    <p>The Silence of the Lambs 1991</p> </section>
+<section id="nom407" class="boxnome";>
+    <p>Howl's Moving Castle 2004</p> </section>
+<section id="nom408" class="boxnome";>
+    <p>The Shining 1980</p> </section>
+<section id="nom409" class="boxnome";>
+    <p>Lemony Snicket's A Series of Unfortunate Events 2004</p> </section>
+<section id="nom410" class="boxnome";>
+    <p>Rear Window 1954</p> </section>
+
+
+<!-- NOMES DOS FILMES do João ----------------------------------- -->
+<section id="nom601" class="boxnome";>
+    <p>Creature from the Black Lagoon 1954</p> </section>
+<section id="nom602" class="boxnome";>
+    <p>Pulp Fiction 1994</p> </section>
+<section id="nom603" class="boxnome";>
+    <p>Help 1965</p> </section>
+<section id="nom604" class="boxnome";>
+    <p>Georgy Girl 1966</p> </section>
+<section id="nom605" class="boxnome";>
+    <p>A Hard Day's Night 1964 </p> </section>
+<section id="nom606" class="boxnome";>
+    <p>Yesterday 2019</p> </section>
+<section id="nom607" class="boxnome";>
+    <p>Deliverance 1972</p> </section>
+<section id="nom608" class="boxnome";>
+    <p>Live and Let Die 1973</p> </section>
+<section id="nom609" class="boxnome";>
+    <p>Midnight Cowboy 1969</p> </section>
+<section id="nom610" class="boxnome";>
+    <p>Kelly's Heroes 1970</p> </section>
+
+
+
+<!-- NOMES DOS FILMES da Ana ----------------------------------- -->
+<section id="nom701" class="boxnome";>
+    <p>The High Sign 1921</p> </section>
+<section id="nom702" class="boxnome";>
+    <p>The Man Who Knew Too Much 1956</p> </section>
+<section id="nom703" class="boxnome";>
+    <p>Down By Law 1986</p> </section>
+<section id="nom704" class="boxnome";>
+    <p>Matchstick Men 2003</p> </section>
+<section id="nom705" class="boxnome";>
+    <p>O Xangô de Baker Street 2001</p> </section>
+<section id="nom706" class="boxnome";>
+    <p>Monty Python's Life of Brian 1979</p> </section>
+<section id="nom707" class="boxnome";>
+    <p> L'armata Brancaleone 1966</p> </section>
+<section id="nom708" class="boxnome";>
+    <p>Blue Velvet 1986</p> </section>
+<section id="nom709" class="boxnome";>
+    <p>La Valleé 1972</p> </section>
+<section id="nom710" class="boxnome";>
+    <p>A Clockwork Orange 1971</p> </section>
+
+<!-- NOMES DOS FILMES do Louis ----------------------------------- -->
+<section id="nom801" class="boxnome";>
+    <p>All Quiet on the Western Front 2023</p> </section>
+<section id="nom802" class="boxnome";>
+    <p>Dune Part Two 2024</p> </section>
+<section id="nom803" class="boxnome";>
+    <p>The Lord of the Rings The Return of the King 2003</p> </section>
+<section id="nom804" class="boxnome";>
+    <p>The Lord of the Rings The Fellowship of the Ring</p> </section>
+<section id="nom805" class="boxnome";>
+    <p>The Lord of the Rings The Two Towers 2002</p> </section>
+<section id="nom806" class="boxnome";>
+    <p>Star Wars III Revenge of the Sith 2002</p> </section>
+<section id="nom807" class="boxnome";>
+    <p>Saving Private Ryan 1998</p> </section>
+<section id="nom808" class="boxnome";>
+    <p>Rocky 1976</p> </section>
+<section id="nom809" class="boxnome";>
+    <p>1917 2019</p> </section>
+<section id="nom810" class="boxnome";>
+    <p>Cidade de Deus 2009</p> </section>
+
+
+<!-- Mensagem  --------------------------------------------------- -->
+
+<section id="msg100" class="boxmsg">
+        <p>Selectionez un film, svp</p>  </section>
+
+<!-- RESUMO DOS FILMES da Manuela --------------------------------------------------- -->
+
+<section>
+
+    <div id="r101" class="boxres">
+        <p>A trial, full of plottwists.</p>
+    </div>
+
+    <div id="r102" class="boxres">
+        <p>The life of the queen of France, before the revolution.</p>
+    </div>
+
+    <div id="r103" class="boxres">
+        <p>The magical adventure of Dorothy and her friends.</p>
+    </div>
+
+    <div id="r104" class="boxres">
+        <p> A romantic comedy about an excentric socialite
+that lives in New York in search of stabilty and financial independance</p>
+    </div>
+
+    <div id="r105" class="boxres">
+        <p>A movie musical classic abou.</p>
+    </div>
+
+    <div id="r106" class="boxres">
+        <p> The life of Priscilla and her life as the wife of the star Elvis Presley.
+         The most recent movie by Sofia Coppola, the greatest director alive</p>
+    </div>
+
+    <div id="r107" class="boxres">
+        <p>A story of love and war during the american civil war..</p>
+    </div>
+
+    <div id="r108" class="boxres">
+        <p>A excentric youg girl explores the world, with all its wonders, but all it's problems and hardships.</p>
+    </div>
+
+    <div id="r109" class="boxres">
+        <p>The real story of the rise and fall of Jordan Belfort.</p>
+    </div>
+
+    <div id="r110" class="boxres">
+        <p>A musical about the the americal prision system and how it's actually, just like showbiz.</p>
+    </div>
+</section>
+
+<!-- RESUMO DOS FILMES da Claire --------------------------------------------------- -->
+
+<section>
+     
+    <div id="r201" class="boxres">
+        <p>Hitchcock's masterpiece, one of the best suspense movies of all time.</p>
+    </div>
+
+    <div id="r202" class="boxres">
+        <p>A young couple stays at a motel, whose sinister owner triggers terrifying events.</p>
+    </div>
+
+    <div id="r203" class="boxres">
+        <p>Musical about a governess who transforms the lives of an Austrian family threatened by the Second World War.</p>
+    </div>
+
+    <div id="r204" class="boxres">
+        <p>8-year-old boy is accidentally left alone at home during vacation and has to fight off thieves.</p>
+   </div>
+
+    <div id="r205" class="boxres">
+        <p>Identical twins, separated at birth, meet at summer camp and try to reunite their divorced parents.</p>
+   </div>
+
+    <div id="r206" class="boxres">
+        <p>Musical about a young writer who falls in love with a courtesan at the Moulin Rouge cabaret in Paris.</p>
+  </div>
+
+    <div id="r207" class="boxres">
+        <p>Couple undergo a procedure to erase memories of their troubled relationship.</p>
+  </div>
+
+    <div id="r208" class="boxres">
+        <p>Film full of ABBA songs, a young girl about to get married, invites three of her mother's ex-boyfriends to find out who her father is.</p>
+   </div>
+
+    <div id="r209" class="boxres">
+        <p>A plastic surgeon, to avoid a serious commitment, pretends to be married and asks his assistant to pretend to be his wife.</p>
+  </div>
+
+    <div id="r210" class="boxres">
+        <p>Young woman becomes a prostitute to survive and pursue a dream of freedom and independence, facing challenges and disillusionment.</p>
+   </div>
+
+</section>
+
+<!-- RESUMO DOS FILMES da Chloé --------------------------------------------------- -->
+
+<section>
+    
+    <div id="r301" class="boxres">
+        <p>Tris discovers she is DIVERGENT in a society divided by factions,
+         fight to survive while facing a conspiracy.</p>
+   </div>
+
+    <div id="r302" class="boxres">
+        <p>Sophie, a young girl, finds an old love letter in Verona and decides to help the author, Claire, find her lost love.</p>
+  </div>
+
+    <div id="r303" class="boxres">
+        <p>Jennifer, in 1965, tries to remember a forbidden romance, Ellie, in the present, discovers her letters and seeks to unravel the mystery.</p>
+  </div>
+
+    <div id="r304" class="boxres">
+        <p>In this amazing romantic comedy, Andie tries to fend off a man, while Ben bets he can make her fall in love in 10 days.</p>
+  </div>
+
+    <div id="r305" class="boxres">
+        <p>Louisa, Will's caregiver, quadriplegic. They get closer, but face dilemmas about love and quality of life.</p>
+  </div>
+
+    <div id="r306" class="boxres">
+        <p>Viola disguises herself as her twin brother at a boys' school to play football. She falls in love with her roommate, creating hilarious situations.</p>
+ </div>
+
+    <div id="r307" class="boxres">
+        <p>In this dreamy romcom, Kat, a rebel girl, will fall in love with Patrick, who was intially hired to date her.</p>
+   </div>
+
+    <div id="r308" class="boxres">
+        <p>Three women find out they are going out with the same man, and so they unite to get revenge on him.</p>
+   </div>
+
+    <div id="r309" class="boxres">
+        <p> A romcom set in London, where a bookshop owner falls in love with a famous actress.</p>
+   </div>
+
+    <div id="r310" class="boxres">
+        <p>Canadian publisher, to avoid being deported from the USA, convinces her assistant to marry her, to obtain a visa.</p>
+  </div>
+
+</section>
+
+<!-- RESUMO DOS FILMES da Gabi --------------------------------------------------- -->
+<section>
+    
+
+    <div id="r401" class="boxres">
+        <p>The adventures of Gustave, legendary doorman of a famous fictional hotel
+        between the first and second world wars.</p>
+  </div>
+    
+
+    <div id="r402" class="boxres">
+        <p>A thief who steals corporate secrets through the technology of entering the subconscious
+         receives the opposite task of planting an idea in the mind of the director of a large company.</p>
+   </div>
+
+    <div id="r403" class="boxres">
+        <p>In Nazi-occupied France during World War II, a plot to assassinate
+        Nazi leaders by a group of US Jewish soldiers coincides with plans to
+        revenge a movie theater owner.</p>
+    </div>
+
+    <div id="r404" class="boxres">
+        <p>When a teenage girl is possessed by a mysterious entity,
+         the mother seeks help from a priest, who is also a psychiatrist.</p>
+   </div>
+
+    <div id="r405" class="boxres">
+        <p>A team of explorers travels through a wormhole in space,
+         in an attempt to guarantee the survival of humanity.</p>
+   </div>
+
+    <div id="r406" class="boxres">
+        <p>A young woman seeks help from a murderous, cannibalistic and manipulative inmate,
+            to catch another crazy serial killer.</p>
+    </div>
+
+    <div id="r407" class="boxres">
+        <p>An insecure girl is cursed by a hateful witch. And her only chance
+           to save herself is a young wizard in a traveling castle.</p>
+   </div>
+
+    <div id="r408" class="boxres">
+        <p>During the winter, in an isolated hotel, a family suffers a sinister presence that
+        influences his father's violence, while psychic son sees horrible omens from the past
+        and the future.</p>
+   </div>
+
+    <div id="r409" class="boxres">
+        <p>When a huge fire kills their parents, three children are placed in the custody of their cousin and actor/
+        theater director, who secretly plans to steal the great fortune left in their inheritance.</p>
+  </div>
+
+    <div id="r410" class="boxres">
+        <p>A photographer in a wheelchair spies on neighbors through his apartment window
+         and is convinced that one of them committed murder.</p>
+   </div>
+
+</section>
+
+<!-- RESUMO DOS FILMES do João --------------------------------------------------- -->
+
+<section>
+
+    <div id="r601" class="boxres">
+        <p>The depths of the black lagoon hide an inarticulate monster,
+          temperamental, misunderstood, unsightly and
+          incredibly clumsy.</p>
+    </div>
+
+    <div id="r602" class="boxres">
+        <p>Quentin Tarantino's masterpiece, one of the best 
+             films of all time.</p>
+     </div>
+
+     <div id="r603" class="boxres">
+        <p>Ritual fanatics persecute Ringo Starr because of
+          of a ring and all the Beatles are involved.</p>
+   </div>
+
+     <div id="r604" class="boxres">
+        <p>In London, a simple but vivacious young woman escapes the attention
+         of her father's old boss as she struggles to
+         Capture a glimpse of her roommate's glamorous life.</p>
+   </div>
+
+    <div id="r605" class="boxres">
+        <p>Two "typical" days in the lives of the Beatles, they struggle to
+         control Paul's grandfather and themselves as they prepare
+         for a live TV performance.</p>
+   </div>
+
+   <div id="r606" class="boxres">
+        <p> A musician who, after a global blackout, discovers he is the
+            the only one in the world to remember the Beatles and use their songs
+            to achieve fame. </p>
+   </div>
+
+    <div id="r607" class="boxres">
+        <p>Intent on seeing the Cahulawassee River before it is dammed
+         and transformed into a lake, four friends take a canoe trip that
+         will never be forgotten again. The banjo duel scene is also unforgettable.</p>
+   </div>
+
+    <div id="r608" class="boxres">
+        <p>One of the best 007 films, with the theme song composed
+         by beatle Paul McCartney</p>
+   </div>
+
+    <div id="r609" class="boxres">
+        <p>Two friends travel from Texas to New York in search of their fortune,
+           The theme song is Everybody's Talkin' by Harry Nilsson.</p>
+  </div>
+
+     <div id="r610" class="boxres">
+        <p>Comedy about a group of American soldiers during
+           the Second World War that, upon discovering the location
+           of a cargo of Nazi gold, embarks on a non official mission to steal it.</p>
+   </div>
+
+
+>
+
+</section>
+
+
+<!-- RESUMO DOS FILMES da Ana --------------------------------------------------- -->
+<section>
+    
+ 
+    <div id="r701" class="boxres">
+        <p>Our hero came from nowhere, wasn't going anywhere
+           and ended up not going anywhere at all.</p>
+  </div>
+
+     <div id="r702" class="boxres">
+        <p>An American doctor and his wife, a former music star, on vacation in Morocco
+         witness a murder and are drawn into a plot of intrigue
+         international full of twists and turns.</p>
+   </div>
+
+   <div id="r703" class="boxres">
+        <p>Two men are framed and sent to prison, 
+        where they find a killer who helps them escape and leave the state.</p>
+   </div>
+
+    <div id="r704" class="boxres">
+        <p>Two con artists are about to pull off a lucrative scam when the
+         teenage daughter of one of them arrives unexpectedly.</p>
+   </div>
+
+    <div id="r705" class="boxres">
+        <p>Wonderful film, based on the book by Jô Soares, a police comedy in
+         that Sherlock Holmes is called to Brazil, at the end of the 19th century, to
+         investigate the theft of a Stradivarius violin and a series of murders
+         linked to Afro-Brazilian culture.</p>
+   </div>
+
+    <div id="r706" class="boxres">
+        <p>Film written by the group Monty Python and financed by the Beatle George Harrison, tells
+         the story of a man who was born in a stable next door and at the same time as
+         Jesus was born and spends his life being confused with the messiah.</p>
+   </div>
+
+    <div id="r707" class="boxres">
+        <p>Italian comedy that follows Brancaleone, a bumbling knight, and his army
+         disorganized on a journey full of absurd situations   
+               during the Middle Ages.</p>
+   </div>
+
+    <div id="r708" class="boxres">
+        <p>Directed by David Lynch, it follows a young man who discovers a dark mystery in
+        his city when he finds a human ear, revealing an underworld of crime,
+        perversion and violence.</p>
+    </div>
+
+    <div id="r709" class="boxres">
+        <p>Directed by Barbet Schroeder, a woman looking for 
+         exotic lands, joins a group of explorers on a journey through
+         New Guinea. As they advance through an unknown valley, they seek a
+         spiritual utopia and experience changes in the perception of reality.</p>
+   </div>
+
+    <div id="r710" class="boxres">
+        <p>Dystopian film directed by Stanley Kubrick, based on the book by
+         Anthony Burgess, shows a violent young man who undergoes treatment
+         experimental approach to eliminate aggression, exploring themes of
+         control and free will.</p>
+  </div>
+
+</section>
+
+<!-- RESUMO DOS FILMES do Louis --------------------------------------------------- -->
+<section>
+  
+ 
+    <div id="r801" class="boxres">
+        <p>A young German soldier in World War I experiences the horrors of the
+           conflict in the trenches. The film shows the contrast between the enthusiasm before the war,
+           the initial struggle and the brutal reality of the front, highlighting the futility 
+           and the trauma of combat.</p>
+    </div>
+
+    <div id="r802" class="boxres">
+        <p>Paul Atreides joins the Fremen to avenge his father and defeat the
+           House Harkonnen, as he embraces his role as messiah of Arrakis.</p>
+    </div>
+
+    <div id="r803" class="boxres">
+        <p>Aragorn leads against Sauron, while Frodo and Sam destroy the Ring,
+           defeating Sauron and bringing peace to Middle Earth.</p>
+    </div>
+
+    <div id="r804" class="boxres">
+        <p>Frodo inherits the Ring and sets out on a journey to destroy it, trying to
+         prevent Sauron from recovering the Ring and dominating Middle Earth.</p>
+    </div>
+
+    <div id="r805" class="boxres">
+        <p>Frodo and Sam continue their quest to destroy the Ring with Gollum's help,
+         while Aragorn, Legolas and Gimli fight against the forces of Saruman and Sauron.</p>
+    </div>
+
+    <div id="r806" class="boxres">
+        <p>Anakin Skywalker becomes Darth Vader, the fall
+        of the Jedi and the rise of the Empire.</p>
+    </div>
+
+    <div id="r807" class="boxres">
+        <p>Group of soldiers in World War II on a mission to find and
+         bring back Private James Ryan, whose brothers were killed in action.</p>
+   </div>
+
+    <div id="r808" class="boxres">
+        <p>Rocky Balboa, an amateur boxer from Philadelphia gets a chance
+          unexpected opportunity to fight for the world title against champion Apollo Creed.</p>
+    </div>
+
+    <div id="r809" class="boxres">
+        <p>Two British soldiers on a mission to deliver a message that can 
+         save 1600 men during the First World War.</p>
+   </div>
+
+    <div id="r810" class="boxres">
+        <p>It portrays life in a favela of Rio de Janeiro, following Rocket, a young 
+        photographer, while witnessing the rise of crime and violence
+        between gangs in the 1960s and 1980s.</p>
+    </div>
+
+</section>
+
+
+
+<!-- POSTERS FILMES da Manuela ----------------------------------- -->
+
+<section id="img101" class="box";>
+    <img src="P-Witness for the Prosecution 1957.jpeg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img102" class="box";>
+    <img src="P-Marie Antoinette 2006.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img103" class="box";>
+    <img src="P-The Wizard of Oz 1939.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img104" class="box";>
+    <img src="P-Breakfast at Tiffany's 1961.jpg" alt="falhou"  width="200" height="200">
+   </section>
+
+<section id="img105" class="box";>
+    <img src="P-Singin' in the Rain 1952.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img106" class="box";>
+    <img src="P-Priscilla 2023.jpg" alt="falhou"  width="200" height="200">
+    </section>
+<section id="img107" class="box";>
+    <img src="P-Gone with the Wind 1939.jpg" alt="falhou"  width="200" height="200">
+    </section> 
+<section id="img108" class="box";>
+    <img src="P-Poor Things 2023.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img109" class="box";>
+    <img src="P-The Wolf of Wall Street 2013.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img110" class="box";>
+    <img src="P-Chicago 2002.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<!-- POSTERS DOS FILMES da Claire ----------------------------------- -->
+
+<section id="img201" class="box";>
+    <img src="P-Vertigo 1958.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img202" class="box";>
+    <img src="P-Psycho 1960.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img203" class="box";>
+    <img src="P-The Sound of Music 1965.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img204" class="box";>
+    <img src="P-Home Alone 1990.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img205" class="box";>
+    <img src="P-The Parent Trap 1998.jpg" alt="falhou" width="200" height="200">
+  </section>
+
+<section id="img206" class="box";>
+    <img src="P-Moulin Rouge 2001.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img207" class="box";>
+    <img src="P-Eternal Sunshine of the Spotless Mind 2004.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img208" class="box";>
+    <img src="P-Mamma Mia 2008.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img209" class="box";>
+    <img src="P-Just Go with It 2011.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img210" class="box";>
+    <img src="P-Vivre Sa Vie 1962.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+
+<!-- POSTERS DOS FILMES da Chloé ----------------------------------- -->
+
+<section id="img301" class="box";>
+    <img src="P-Divergent 2014.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img302" class="box";>
+    <img src="P-Letters to Juliet 2010.jpg" alt="falhou" width="200" height="200">
+  </section>
+
+<section id="img303" class="box";>
+    <img src="P-The Last Letter from Your Lover 2021.jpg" alt="falhou" width="200" height="200">
+  </section>
+
+<section id="img304" class="box";>
+    <img src="P-How to Lose a Guy in 10 Days 2003.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img305" class="box";>
+    <img src="P-Me Before You 2016.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img306" class="box";>
+    <img src="P-She's The Man 2006.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img307" class="box";>
+    <img src="P-10 Things I Hate About You 1999.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img308" class="box";>
+    <img src="P-The Other Woman 2014.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img309" class="box";>
+    <img src="P-Notting Hill 1999.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img310" class="box";>
+    <img src="P-The Proposal 2009.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<!-- POSTERS FILMES da Gabi ----------------------------------- -->
+
+<section id="img401" class="box";>
+    <img src="P-The Grand Budapest Hotel 2014.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img402" class="box";>
+    <img src="P-Inception 2010.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img403" class="box";>
+    <img src="P-Inglorious Basterds 2009.jpg" alt="falhou"  width="200" height="200">
+   </section>
+
+<section id="img404" class="box";>
+    <img src="P-The Exorcist 1973.jpg" alt="falhou"  width="200" height="200">
+   </section>
+
+<section id="img405" class="box";>
+    <img src="P-Interstellar 2014.jpg" alt="falhou"  width="200" height="200">
+   </section>
+
+<section id="img406" class="box";>
+    <img src="P-The Silence of the Lambs 1991.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img407" class="box";>
+    <img src="P-Howl's Moving Castle 2004.jpg" alt="falhou"  width="200" height="200">
+   </section>
+
+<section id="img408" class="box";>
+    <img src="P-The Shining 1980.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img409" class="box";>
+    <img src="P-Lemony Snicket's 2004.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+<section id="img410" class="box";>
+    <img src="P-Rear Window 1954.jpg" alt="falhou"  width="200" height="200">
+    </section>
+
+
+<!-- POSTERS DOS FILMES do João ----------------------------------- -->
+
+<section id="img601" class="box";>
+    <img src="P-Creature from the Black Lagoon 1954.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img602" class="box";>
+    <img src="P-Pulp Fiction 1994.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img603" class="box";>
+    <img src="P-Help 1965.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img604" class="box";>
+    <img src="P-Georgy Girl 1966.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img605" class="box";>
+    <img src="P-A Hard Day's Night 1964.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img606" class="box";>
+    <img src="P-Yesterday 2019.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img607" class="box";>
+    <img src="P-Deliverance 1972.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img608" class="box";>
+    <img src="P-Live and Let Die 1973.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img609" class="box";>
+    <img src="P-Midnight Cowboy 1969.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img610" class="box";>
+    <img src="P-Kelly's Heroes 1970.jpg" alt="falhou" width="200" height="200">
+  </section>
+
+
+
+<!-- POSTERS DOS FILMES da Ana ----------------------------------- -->
+
+<section id="img701" class="box";>
+    <img src="P-The High Sign 1921.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img702" class="box";>
+    <img src="P-The Man Who Knew Too Much 1956.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img703" class="box";>
+    <img src="P-Down By Law 1986.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img704" class="box";>
+    <img src="P-Matchstick Men 2003.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img705" class="box";>
+    <img src="P-O Xangô de Baker Street 2001.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img706" class="box";>
+    <img src="P-Monty Python's Life of Brian 1979.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img707" class="box";>
+    <img src="P-L'armata Brancaleone 1966.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img708" class="box";>
+    <img src="P-Blue Velvet 1986.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img709" class="box";>
+    <img src="P-La Vallée 1972.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img710" class="box";>
+    <img src="P-A Clockwork Orange 1971.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<!-- POSTERS DOS FILMES do Louis----------------------------------- -->
+
+<section id="img801" class="box";>
+    <img src="P-All Quiet on the Western Front 2023.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img802" class="box";>
+    <img src="P-Dune Part Two 2024.jpg" alt="falhou" width="200" height="200">
+  </section>
+
+<section id="img803" class="box";>
+    <img src="P-The Lord of the Rings The Return of the King 2003.jpg" alt="falhou" width="200" height="200">
+  </section>
+
+<section id="img804" class="box";>
+    <img src="P-The Lord of the Rings The Fellowship of the Ring 2001.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img805" class="box";>
+    <img src="P-The Lord of the Rings The Two Towers 2002.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img806" class="box";>
+    <img src="P-Star Wars III Revenge of the Sith 2002.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img807" class="box";>
+    <img src="P-Saving Private Ryan 1998.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img808" class="box";>
+    <img src="P-Rocky 1976.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+<section id="img809" class="box";>
+    <img src="P-1917 2019.jpg" alt="falhou" width="200" height="200">
+    </section>
+
+<section id="img810" class="box";>
+    <img src="P-Cidade de Deus 2009.jpg" alt="falhou" width="200" height="200">
+   </section>
+
+
+
+<!-- SOM DOS FILMES da Manuela ----------------------------------- -->
+
+
+<section id="som103" class="box">
+    <audio controls>
+        <source src="Ray Charles - Somewhere Over the Rainbow.mp3" type="audio/mpeg"> </audio>
+    <audio controls>
+        <source src="The Wizard of Oz - Wild Rover.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+
+<section >
+    <audio id="som105" class="box" controls>
+        <source src="Gene Kelly - Singing In The Rain.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section id="som106" class="box";>
+     <audio controls>
+        <source src="Tommy James & The Shondells - Crimson & Clover.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section ;>
+    <audio id="som107" class="box" controls>
+        <source src="Al Jolson - My Old Kentucky Home.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+
+
+
+<!-- SOM DOS FILMES da Claire ----------------------------------- -->
+
+<section >
+    <audio id="som201" class="box" controls>
+        <source src="Alfred Hitchcock - Vertigo 1958.mp3" type="audio/mpeg"> </audio>
+  </section>
+
+<!-- SOM DOS FILMES da Chloé ----------------------------------- -->
+
+
+
+<!-- SOM DOS FILMES da Gabi ----------------------------------- -->
+
+<section>
+    <audio id="som401" class="box" controls>
+        <source src="Bobby Darin - Beyond the Sea.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som402" class="box" controls>
+        <source src="Aerosmith - Dream On.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section >
+    <audio id="som403" class="box" controls>
+        <source src="David Bowie - Cat People.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section >
+     <audio id="som404" class="box" controls>
+        <source src="Mike Oldfield - Tubular Bells.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som405" class="box" controls>
+        <source src="Talking Heads - Psycho Killer.mp3" type="audio/mpeg"> </audio>
+    </section>
+ 
+<section >
+    <audio id="som406" class="box" controls>
+        <source src="Talking Heads - Psycho Killer.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section id="som407" class="box" >
+    <audio  controls>
+        <source src="Joe Hisaishi - Howl's Moving Castle Clip1.mp3" type="audio/mpeg"> </audio>
+    <audio controls>
+        <source src="Joe Hisaishi - Howl's Moving Castle Clip2.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som408" class="box" controls>
+        <source src="Pomplamoose - Bust Your Knee Caps.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section ;>
+    <audio id="som409" class="box" controls>
+        <source src="The Gothic Archies - Scream and Run Away.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section >
+    <audio id="som410" class="box" controls>
+        <source src="Bing Crosby - To See You Is to Love You.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+
+<!-- SOM DOS FILMES do João ----------------------------------- -->
+
+
+<section >
+    <audio id="som602" class="box" controls>
+        <source src="Statler Brothers - Flowers on the Wall.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section id="som603" class="box">
+    <audio  controls>
+        <source src="Beatles - Help!.mp3" type="audio/mpeg"> </audio>
+    <audio controls>
+        <source src="Beatles - Ticket To Ride.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section >
+     <audio id="som604" class="box" controls>
+        <source src="Seekers - Georgy Girl.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section id="som605" class="box" >
+    <audio  controls>
+        <source src="Beatles - A Hard Day's Night.mp3" type="audio/mpeg"> </audio>
+    <audio controls>
+        <source src="Beatles - I Should Have Known Better.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+   <audio id="som606" class="box" controls>
+        <source src="Beatles - Ob-La-Di, Ob-La-Da.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som607" class="box" controls>
+        <source src="Eric Weissberg & Steve Mandell - Dueling Banjos.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som608" class="box" controls>
+        <source src="Paul McCartney - Live And Let Die.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som609" class="box" controls>
+        <source src="Nilsson - Everybody's Talkin'.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som610" class="box" controls>
+        <source src="Mike Curb Congregation - Burning Bridges.mp3" type="audio/mpeg"> </audio>
+  </section>
+
+
+
+<!-- SOM DOS FILMES da Ana ----------------------------------- -->
+
+<section >
+    <audio id="som701" class="box" controls>
+        <source src="Marvin Hamlisch - The Entertainer.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som702" class="box" controls>
+        <source src="Doris Day - Que Sera Sera.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section >
+    <audio id="som703" class="box" controls>
+        <source src="Tom Waits - Tango Till They're Sore.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som704" class="box" controls>
+        <source src="Rolling Stones - Angie.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+    <audio id="som706" class="box" controls>
+        <source src="Eric Idle - Always Look On The Bright Side Of Life.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section >
+    <audio id="som707" class="box" controls>
+        <source src="Brancaleone.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<section >
+     <audio id="som708" class="box" controls>
+        <source src="Bobby Vinton - Blue Velvet.mp3" type="audio/mpeg"> </audio>
+    </section>
+
+<section >
+    <audio id="som709" class="box" controls>
+        <source src="Pink Floyd - The Gold It's In The.mp3" type="audio/mpeg"> </audio>
+  </section>
+
+<section >
+    <audio id="som710" class="box" controls>
+        <source src="Johnny Mathis - Song of Joy.mp3" type="audio/mpeg"> </audio>
+   </section>
+
+<!-- SOM DOS FILMES do Louis----------------------------------- -->
+
+
+<!-- ce que tes choix disent de toi --------------------------------------------------- -->
+
+<section id="fundoav" class="fundoAVAL" >
+  
+    <h1>ce que tes choix disent de toi<h1>
+    <h3> <h3>
+    <h3> utilise avec moderation <h3>
+    <br><br><br><br><br><br><br><br>
+    <h6> si vous aimez une film, consultez IMDB </h6> 
+    <p>    <p>
+</section>
+
+
+
+<section id="avaliações" >
+    
+    <section id="a001" class="boxAVAL">
+        <p>Vous n'avez pas donnez un like a aucun film..</p>
+    </section>
+
+    <section id="a002" class="boxAVAL">
+        <p>Vous avez donnez un like a moins de 10 films.</p>
+    </section>
+
+    <section id="a003" class="boxAVAL">
+        <p>Vous avez donnez un like a plus de 10 films.</p>
+    </section>
+
+    <section id="a004" class="boxAVAL">
+        <p>Je jamais vu une personne avec un goût comme le votre. </p>
+    </section>
+
+    <section id="a101" class="boxAVAL">
+        <p>Ton goût de films ressemble avec le de Manuela.
+T'a un goût incroyable et t'aimes seulement des films de qualité.</p>
+    </section>
+
+    <section id="a201" class="boxAVAL">
+        <p>Ton choix se ressemble à celles de Claire, 
+cela montre que tu connais l'art du cinema comme personne. Felicitations!!</p>
+    </section>
+
+    <section id="a301" class="boxAVAL">
+        <p>Comme Chloé tu aimes les films romantiques.</p>
+    </section>
+
+    <section id="a401" class="boxAVAL">
+        <p>Ton goût en films est horrible. Décevant...</p>
+   </section>
+
+    <section id="a601" class="boxAVAL">
+        <p>C'est décevant les films dans ce site... nous avons besoin de amis meilleurs</p>
+    </section>
+
+    <section id="a701" class="boxAVAL">
+        <p> C'est décevant les films dans ce site... nous avons besoin de amis meilleurs</p>
+    </section>
+
+    <section id="a801" class="boxAVAL">
+        <p>Même si vous avez choisi de très bons films, vous manquez de culture. 
+            Parlez à Claire ou à Humberto et revenez plus tard.
+</p>
+    </section>
+
+
+</section>
+
+<!-- Mensagens --------------------------------------------------- -->
+<section id="msg000" class="boxmsg">  <p>Selectione une film svp</p> </section>
+<section id="msg001" class="boxmsg">  <p>Il n'a pas de bonnes musiques dans ce film, dsl</p> </section>
+<section id="img000" class="boxpos5";>
+    <img src="P-Buzz.png" alt="falhou" width="200" height="200">
+    </section>
+
+<!-- Botões fixos na lateral direita -->
+<section   id="botfixo1" class="botSAIR" ;>
+        <button onclick="sortir()">sortir</button> </section>
+
+<section   id="botfixo2" class="botVOLTAR" ;> 
+        <button onclick="voltar('Manu','msg100','nom101')">retourner</button>  </section>
+
+<section id="botsurpresa"  class="surpresa" ;>
+        <button onclick="surpresa()">recommendation surprise</button> </section>
+
+<section id="botAV"  class="avalBOT" ;>
+    <button type="button" onclick='Aval10("menu01")'>ce que tes choix disent de toi</button>
+</section>
+
+<section id="trace"  class="boxTRACE" ;>
+    <button onclick="TRACE()">TRACE</button> 
+    <div id="on" style="display: none";> <p>ON<p></p></div>
+    <div id="off" style="display: block;";> <p>OFF<p></p></div>
+</section>
+
+
+<section id="msgfixa"  class="rodapé" ;>
+        <p>Travail de NSI par Manuela, Claire et Louis &copy; 2024 Droits résérvés</p>
+</section>
+
+
+
+
+
+
+<!--  =================================================================-->
+
+<script>
+
+let tr=null; // trace
+let msgAtiva = null;
+let resAtivo=  null;
+let avalAtiva= null;
+let imgAtiva = null;
+let nomAtivo = null;
+let somAtivo = null;
+let  menuANT = null;
+let  menuATU = "menu01";
+let resp=null;
+let idRAND=0;
+let filmeID=null;
+let filmeRAND=null;
+let pessoaRAND=null;
+
+let contLIKE=0;    // contador geral de filmes com like
+let contLIKEp= new Array(11).fill(0);  // filmes com like por pessoa tem
+
+let tabLIKEf= new Array(100).fill(0);  // 0-filme sem like
+
+
+let tabIMDB = [
+"",
+"       ","       ","       ","       ","       ",  // uso futuro
+"       ","       ","       ","       ","       ", 
+               
+"Manuela",
+"0051201","0422720","0032138","0054698","0045152",
+"0109045","0031381","14230458","0993846","0299658",
+
+"Claire",
+"0052357","0054215","0059742","0099785","0120783",
+"0203009","0338013","22041854","1564367","0056663",
+
+"Chloé",
+"1840309","0892318","1893273","0251127","2674426",
+"0454945","0147800","2203939","0125439","1041829",
+
+"Gabi",
+"2278388","1375666","0361748","0070047","0816692", 
+"0102926","0347149","0081505","0339291","0047396",
+
+"João",
+"0046876","0110912","0059260","0059260","0058182", 
+"8079248","0068473","0070328","0064665","0065938",
+
+"Ana",
+"0012278","0049470","0090967","0325805","0171928", 
+"0079470","0060125","0090756","0069451","0066921",
+
+"Louis",
+"1016150","15239678","0167260","0120737","0167261", 
+"0167261","0120815","0075148","8579674","0317248"];
+
+function TRACE(){
+if ( tr==="on") {tr=null; 
+  document.getElementById("off").style.display = "block";
+  document.getElementById("on").style.display = "none";}
+else { tr="on"; 
+  document.getElementById("on").style.display = "block";
+  document.getElementById("off").style.display = "none";}
+}
+
+
+
+function sair() // Fecha a janela atual
+{window.close(); }
+
+
+function reiniciar() // Recarrega o menu inicial
+{ location.reload();}
+
+
+function aleat(min, max) // Gera número aleatório entre min e max-1)
+{   return Math.floor(Math.random() * (max - min) + min);}
+
+
+
+
+function IMDB10(menu,form) {
+
+  limpa(); 
+
+  var valor = document.querySelector('input[name="' + form + '"]:checked');
+  if (valor === null){ativaMSG("msg000"); return;} 
+
+  <!-- obtem o numero IMDB do filme -->
+  let num = valor.value;
+  let pess=  num.substring(0,1);
+  let film = num.substring(1,3);
+  let itab=(+pess)*11 + (+film);
+TR("IMDB10",pess, film, itab);
+  let link= "https://www.imdb.com/title/tt"+tabIMDB[itab]+"/"
+TR("IMDB10 link=",link);
+
+
+  // abre o IMDB do filme em uma nova janela do windows -->
+  window.open(link, "_blank");
+        
+  <!-- reativa o menu -->
+  desatID("vazio"); // desativa fundo vazio
+  ativaID(menu);}
+
+
+function trocar(desativar, ativar){ 
+TR("função trocar");
+
+  if (ativar === "menu01") {ativaID("botAV"); ativaID("botsurpresa");}
+  else {desatID("botAV");desatID("botsurpresa"); }
+  menuATU = ativar;  menuANT = desativar;   
+  ativaID(menuATU);  desatID(menuANT);
+  verificaLIKES(menuATU);
+}
+
+function desatID(id) {
+  if (id === null) {return;}
+  TR("desatID ",id);
+  document.getElementById(id).style.display = "none";}
+
+function ativaID(id) {
+  if (id === null) {return;}
+  TR("ativaID ", id);
+  document.getElementById(id).style.display = "block";}
+
+
+
+
+function limpa() {
+
+  desatMSG(msgAtiva);
+  desatRES(resAtivo);
+  desatNOM(nomAtivo);
+  desatIMG(imgAtiva);
+  desatSOM(somAtivo);
+  desatAVAL(avalAtiva);
+  desatID("fundoav");
+}
+
+function ativaAVAL(id) { ativaID(id); avalAtiva= id;}
+function ativaIMG(id) { ativaID(id);  imgAtiva = id; }
+function ativaMENU(id) {ativaID(id); menuATU= id; }
+function ativaMSG(id) { ativaID(id);  msgAtiva= id; }
+function ativaRES(id) { ativaID(id);  resAtivo= id; }
+function ativaNOM(id) { ativaID(id);  nomAtivo= id; }
+function ativaSOM(id) { ativaID(id);  somAtivo= id; }
+
+function desatAVAL(id) { desatID(id); avalAtiva= null;}
+function desatIMG(id) { desatID(id);  imgAtiva = null; }
+function desatMENU(id) { desatID(id); menuATU= null; }
+function desatMSG(id) { desatID(id);  msgAtiva= null; }
+function desatRES(id) { desatID(id);  resAtivo= null; }
+function desatNOM(id) { desatID(id);  nomAtivo= null; }
+function desatSOM(id) { desatID(id);  somAtivo= null; }
+
+
+function surpresa() { 
+
+desatID("botsurpresa");
+
+limpa();
+desatID("botLK"); // desativa o botão de like
+
+let nump= Math.floor(Math.random() * 9);      // num randomico de 0  a 8
+let numf= Math.floor(Math.random() * 10) + 1; // de 1 a 10
+let indice=nump*100 + numf;
+idRAND=indice;
+pessoaRAND=nump;
+filmeRAND=numf;
+TR("id=",idRAND," pessoa=",pessoaRAND," filme=",filmeRAND);
+
+//video000(); return;
+//Clr000(); return;
+//nump=6;
+
+
+if (nump===0) { video000(); return;}     // video
+else if (nump===1) {Man000(); return;} // Manuela
+else if (nump===6) {Jol000(); return;} // João
+else if (nump===2) {Clr000(); return;} // Claire
+else {P09000(); return;} // 2 pessoas rand
+
+//trocar(menuATU, "surp01");
+//menuANT="menu01";
+}
+
+
+
+function video000() {
+TR("video000");
+  trocar(menuATU, "surp00");
+  menuANT="menu01";
+  resp="menu01";
+}
+
+function Clr000() {
+TR("Clr000");
+  trocar(menuATU, "surp02");
+  menuANT="menu01";
+  resp="menu01";
+}
+
+function Jol000() {
+TR("Jol000");
+  trocar(menuATU, "surp06");
+  menuANT="menu01";
+  resp="menu01";
+}
+
+function Man000() {
+TR("Man000");
+  trocar(menuATU, "surp01");
+  menuANT="menu01";
+  resp="menu01";
+}
+
+function Srp000(menu,volta) {
+TR("Srp000 menu=",menu," volta=",volta);
+
+// recebe um filme na global idRAND formato pff e exibe
+
+  resp=menu;
+  limpa();
+
+  let res = "r" + idRAND;							
+  let nom = "nom" + idRAND;
+  let img = "img" + idRAND;
+  let som = "som" + idRAND;
+
+TR(res, " ",nom," ",img, " ",som);
+  ativaFILME(menu,nom,res,img,som);
+
+
+}
+
+
+
+function P09000() { //recebe a pessoa 1 na var global pessoaRAND)
+TR("P09000");
+
+ // coloca o nome da pessoa 1 no menu supr09
+ let ind = (+pessoaRAND)*11;
+ TR(tabIMDB[ind]);
+ let txt="Salutt, je m'appelle " + tabIMDB[ind]+".";
+ document.getElementById("srn1").innerText = txt;
+
+ // obtem randomicamente a pessoa 2
+ let pess2=pessoaRAND; 
+ while (pess2 === pessoaRAND){
+    pess2= Math.floor(Math.random() * 8) + 1;} // num randomico 1  a 8
+ pessoaRAND= pess2; // passando para as funções Sur001 IMDB200
+ ind = (+pess2)*11;
+TR(tabIMDB[ind]);
+
+ // coloca o nome da pessoa 2 no menu surpr09
+ txt="personne qui s'appelle "+ tabIMDB[ind]+".";
+ document.getElementById("srn2").innerText = txt;
+
+  //exibe o menu surpr09
+  trocar(menuATU, "surpr09");
+  menuANT="menu01";
+  resp="menu01";
+}
+
+
+function video001(menu,volta){  // Resumo
+TR("video001 menu=",menu,  " volta=", volta);
+ ativaFILME(menu,"nom2000","r2000","img2000","som2000");
+}
+
+function Clr001(menu,volta){  // Resumo
+TR("Clr001 menu=",menu,  " volta=", volta);
+ ativaFILME(menu,"nomPRI","rPRI","imgPRI","somPRI");
+}
+
+function Jol001(menu,volta){  // Resumo
+TR("Jol001 menu=",menu,  " volta=", volta);
+
+let numf= Math.floor(Math.random() * 10) + 1; // de 1 a 10
+let ind= 600+numf
+  let res = "r" + ind;
+  let nom = "nom" + ind;
+  let img = "img" + ind;
+  let som = "som" + ind;
+ ativaFILME(menu,nom,res,img,som);
+}
+
+function Sur001(menu,volta){  
+TR("Sur001",menu, volta);
+
+ //recebe pessoa e filme nas globais filmeRAND e pessoaRAND
+
+ // monta id's do filme
+ let  ind = (+pessoaRAND)*100+(+filmeRAND);
+TR(ind,pessoaRAND,filmeRAND);
+  let res = "r" + ind;
+  let nom = "nom" + ind;
+  let img = "img" + ind;
+  let som = "som" + ind;
+ 
+// ativa o filme
+ ativaFILME(menu,nom,res,img,som);
+}
+
+
+
+function ativaFILME(menu,nom,res,img,som){
+TR("ativaFILME");
+TR (menu,nom,res,img,som);
+
+  resp=menu;
+  limpa();
+  mudaCL("vazio","boxsurpr");
+  ativaID("vazio"); // limpa a tela
+  desatID(menu);
+
+  mudaCL(res,"boxres3");
+  ativaRES(res);
+  mudaCL(nom,"boxnom3");
+  ativaNOM(nom);
+  mudaCL(img,"boxpos3");
+  ativaIMG(img);
+  mudaCL(som,"boxsom3");
+  // Altera o tamanho do player 
+  var ap = document.getElementById(som);
+  if (ap) {ap.style.width = "200px"; ativaSOM(som);}
+  else {ativaMSG("msg001")}
+
+//         desatID(menu);
+}
+
+function IMDB002(menu,volta,IMDBnum){ 
+TR("IMDB002 menu=",menu, " volta=",volta," IMDB=",IMDBnum);
+
+  resp=volta;
+  limpa();
+
+  <!-- abre o IMDB do filme em uma nova janela do windows -->
+  let link = "https://www.imdb.com/title/"+IMDBnum+"/";
+TR(link);
+  window.open(link, "_blank");
+    desatID("vazio"); // desativa fundo vazio        
+}
+
+function IMDB200(menu,volta) {
+TR("IMDB200",menu,volta);
+
+  limpa();
+  resp=null;
+
+  let itab=pessoaRAND*11 + filmeRAND;
+if (tr) {alert("itab="+itab);}
+  let link= "https://www.imdb.com/title/tt"+tabIMDB[itab]+"/"
+if (tr) {alert("IMDB200 link="+link);}
+
+
+  <!-- abre o IMDB do filme em uma nova janela do windows -->
+  window.open(link, "_blank");
+        
+  <!-- reativa o menu -->
+  desatID("vazio"); // desativa fundo vazio
+  ativaID(menu);}
+
+
+function mudaCL(id, cl) {
+if (tr) {alert("mudacl id="+id+" cl="+cl);}
+
+  var element = document.getElementById(id);
+  if (element) {element.className = "";  element.classList.add(cl);}  
+}
+
+
+function Like00() { TR("Like00 ");
+
+  limpa();
+
+  // se não for menu de filmes, desativa o botão e retorna
+  let wk=menuATU.substring(0,2);
+   if ( wk != "fm") {desatID("botLK"); return;}
+ 
+  let pess = menuATU.substring(3, 4);
+  let form="form"+pess+"0";
+  TR("Like00"," pess=",pess," form=",form);
+
+  var v1 = document.querySelector('input[name="' + form + '"]:checked');
+  if (v1 === null) {ativaMSG("msg000"); return;}
+
+  let work = v1.value;
+  let film = work.substring(1, 3);
+
+  let likeid = "lk" + film;
+  let ind = (pess) * 10 + parseInt(film);
+TR("likeid=",likeid," ind=",ind);
+
+  if (tabLIKEf[ind] === 0) {
+    tabLIKEf[ind] = 1;
+    contLIKEp[pess]++;
+    contLIKE++;
+    ativaID(likeid);}  // ativa o coração
+  else {
+    tabLIKEf[ind] = 0;
+    contLIKEp[pess]--;
+    contLIKE--;
+    desatID(likeid);} // desativa o coração
+
+
+if (tr) {alert(contLIKEp);
+         alert(tabLIKEf);}
+}
+
+function TR(func, p1, p2, p3, p4, p5, p6) {
+  if (!tr) { return; }
+  
+  let msg = func;  // Inicializa a mensagem com o nome da função
+  
+  if (p1) { msg += " "+ p1; }  
+  if (p2) { msg += " "+ p2; }
+  if (p3) { msg += " "+ p3; }
+  if (p4) { msg += " "+ p4; }
+  if (p5) { msg += " "+ p5; }
+  if (p6) { msg += " "+ p6; }
+  
+  alert(msg);  // Exibe o alerta com a mensagem completa
+}
+
+// ativa corações dos filmes que estão na tela de uma pessoa
+function ativaCORf(pess) { TR("ativaCORf pessoa=",pess);
+                                                                                                                                                                                                                                                                                                                                       
+  let j = pess*10;
+  i=1;
+  let likeid;
+  while (i < 11) {
+    if (tabLIKEf[i+j]===1) {
+      if ( i===10) {likeid="lk10";}
+      else {likeid= "lk" + "0"+i;}
+      ativaID(likeid); }
+    i++;  }
+}
+
+
+
+
+
+// ativa corações das pessoas
+function ativaCORp() {TR("ativaCORp ");
+// -----------  alert(contLIKEp);  
+  let i=1;
+  let likeid;
+  while (i<9) {
+
+     if ( contLIKEp[i] > 0) {
+        if ( i===10) {likeid="lkp10";}
+        else {likeid= "lkp" + "0"+i;}
+        ativaID(likeid);}
+     i++;}
+}
+
+// desativa corações dos filmes
+function desatCORf() { TR("desatCORf ");
+  let i = 1;
+  while (i < 11) {
+    let likeid;
+    if (i === 10) {likeid = "lk10";}
+    else {likeid = "lk" + "0" + i;}
+    desatID(likeid);
+    i++;}
+}
+
+// desativa corações das pessoas
+function desatCORp() {TR("desatCORp ");  
+  let i=1;
+  let likeid;
+  while (i<9) {
+     if ( contLIKEp[i] > 0) {
+        if ( i===10) {likeid="lkp10";}
+        else {likeid= "lkp" + "0"+i;}
+        desatID(likeid);}
+     i++;}
+}
+
+function verificaLIKES(menu) {TR("verificaLIKES ",menu, " ");
+
+  // se for menu inicial ativa corações das pessoas e retorna
+  if (menu==="menu01") {ativaCORp(); return;}
+
+  // se menu anterior era o menu inicial, desativa corações
+  if (menuANT==="menu01") {desatCORp();}
+
+  // se for menu de filmes, 
+  if (menu.startsWith("fm")) {
+     let pess=menu.substring(2,4);
+     
+     ativaCORf(pess);   // ativa corações dos filmes
+     ativaID("botLK");} // habilita o botão de like
+}
+
+function voltar() { 
+if (tr) {alert("função voltar resp=" + resp);}
+if (tr) { alert("anterior="+menuANT);}
+if (tr) { alert("atual="+menuATU);}
+
+ // verifica se vai ficar na mesma tela
+ if (resp) { ativaID(resp); resp=null; }
+
+
+ // vai para uma nova tela
+ else { desatMENU(menuATU);
+        desatID("vazio"); // desativ fundo vazio
+        desatID("botLK");
+        desatCORf();
+        desatCORp();
+        if (menuANT==="menu01") {ativaID("botAV");
+                                ativaID("botsurpresa");}
+        else { desatID("botAV")};
+        ativaMENU(menuANT);
+        verificaLIKES(menuANT); }
+
+ limpa();
+ if (tr) {alert("Saindo da função voltar resp= " + resp);}
+}
+
+// Avaliação do usuário baseada nos filmes em que ele deu like
+function Aval10(menu) {
+
+if (tr) {alert("Aval10 menu=" + menu);}
+
+if (tr) {alert(tabLIKEf);}
+if (tr) {alert(contLIKE);}
+
+
+   limpa(); resp=null; menuANT="menu01"
+   desatID(menu);
+   desatID("botAV");
+   ativaID("fundoav");
+
+  // se não deu nenhum like
+  if (contLIKE === 0) {ativaAVAL("a001"); return;}
+
+  // se deu like no High Sign
+  if (tabLIKEf[71] === 1)  {ativaAVAL("a701"); return;}
+
+  // se deu like no Creature From the Black Lagoon
+  if (tabLIKEf[61] === 1)  {ativaAVAL("a601"); return;}
+
+  // se deu like no primeiro filme da Manuela
+  if (tabLIKEf[11] === 1)  {ativaAVAL("a101"); return;}
+
+  // se deu like no primeiro filme da Claire
+  if (tabLIKEf[21] === 1)  {ativaAVAL("a201"); return;}
+
+  // se deu like no primeiro filme da Chloé
+  if (tabLIKEf[31] === 1)  {ativaAVAL("a301"); return;}
+
+  // se deu like no primeiro filme da Gabi
+  if (tabLIKEf[41] === 1)  {ativaAVAL("a401"); return;}
+
+  // se deu like no primeiro filme do Louis
+  if (tabLIKEf[81] === 1)  {ativaAVAL("a801"); return;}
+
+
+ // se deu mais de dez likes
+  if (contLIKE > 10) {ativaAVAL("a003"); return;}
+
+
+ // não atendeu nenhuma condição prevista, é
+ ativaAVAL("a004");//   caso perdido
+}
+ 
+function Resumo10(menu,form,msg) {
+if (tr) {alert("Resumo10");}
+
+  resp=menu;
+  limpa();
+  let valor = document.querySelector('input[name="' + form + '"]:checked');
+  if (valor === null){ativaMSG(msg); return;} 
+
+ativaID("botLK"); // habilita o botão de like
+
+  // monta id's
+  let work = valor.value;
+  let indice= work.slice(0, 3);
+  let id_res = "r" + indice;
+  let id_nom = "nom" + indice;
+  let id_img = "img" + indice;
+  let id_som = "som" + indice;
+
+  mudaCL("vazio","boxvazio");
+  ativaID("vazio");
+
+  // ativa nome, resumo, poster e audio player deslocados para a direita
+  mudaCL(id_res,"boxres4");
+  ativaRES(id_res);
+  mudaCL(id_nom,"boxnom4");
+  ativaNOM(id_nom);
+  mudaCL(id_img,"boxpos4");
+  ativaIMG(id_img);
+
+  
+  mudaCL(id_som,"boxsom4");
+// Altera o tamanho do player 
+var ap = document.getElementById(id_som);
+if (ap) {ap.style.width = "200px"; ativaSOM(id_som);}
+//else {ativaMSG("img000");}
+else {ativaMSG("msg001");}
+
+  <!-- ativa os likes  -->
+  let pess=work.slice(0, 1);
+  let j = pess*10;
+  i=1;
+  let likeid;
+  while (i < 11) {
+    if (tabLIKEf[i+j]===1) {
+      if ( i===10) {likeid="lk10";}
+      else {likeid= "lk" + "0"+i;}
+      ativaID(likeid); }
+    i++;  }
+
+  resp=null;
+  <!--desatID(menuATU); // sem mexer no menu anterior -->
+}
+
+
+
+</script>
+</body>
+</html>
+
+
