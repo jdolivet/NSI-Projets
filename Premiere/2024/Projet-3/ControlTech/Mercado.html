@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ryan, Breno, Maxime">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlTech</title>
+    <link rel="stylesheet" href="style.css">
+		<style>                                 
+			.tabs {
+				display:flex;
+				justify-content: center;
+				margin: 1rem 0;                       
+			}
+			.tab-link {
+				margin: 0 1rem;
+				padding: 10px 20px;
+				cursor: pointer;
+				background-color: #333;
+				color: white;
+				border: none;
+			}
+			.tab-link.active {
+				background-color: #555;
+			}
+			.tab-content {
+				display: none;
+				padding: 20px;
+				background-color: #f9f9f9;
+				border: 1px solid #ddd;
+			}
+			.tab-content.active {
+				display: block;
+			}
+		</style>
+</head>
+<body>
+    <header>
+        <h1><u>ControlTech</u></h1>
+        <nav>
+            <a class="tab-link" href="#" onClick="opaTab(event, 'produtos')">Produtos</a>
+            <a class="tab-link" href="#" onClick="opaTab(event, 'carrinho')">Carrinho</a>
+            <a class="tab-link" href="#" onClick="opaTab(event, 'contato')">Contato</a>
+            <a class="tab-link" href="#" onClick="opaTab(event, 'donos')">Sobre os Donos</a>
+        </nav>
+    </header>
+		
+    <!-- Section des produits -->
+    <section id="produtos" class="tab-content active">
+		<h2>Nossos Produtos</h2>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Razer_DeathAdder_2013_Edition-back_oblique-ar_16to10-fs_PNr%C2%B00401.jpg" width=20% height=20% alt="Produto 1">
+			<h3>Mouse gamer ShadowStrike 3600 dpi</h3>
+			<p>Equipado com sensor de 3600 DPI ajustável, o ShadowStrike oferece precisão extrema e design ergonômico para longas sessões de jogo. Conta com 6 botões programáveis e iluminação RGB.</p>
+			<p>Preço: R$ 150,90</p>
+			<button onclick="adicionarCarrinho('Produto 1', 49.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Razer_BlackWidow_Ultimate_2014_Elite_Mechanical_Gaming_Keyboard.jpg" width=20% height=20% alt="Produto 2">
+			<h3>Teclado gamer BlazeStorm</h3>
+			<p>Teclado mecânico com switches táteis e duráveis. Iluminação RGB customizável e construção reforçada para máxima durabilidade. Ideal para quem busca resposta rápida e precisão.</p>
+			<p>Preço: R$ 299,99</p>
+			<button onclick="adicionarCarrinho('Produto 2', 79.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/DualShock_4.jpg" width=20% height=20% alt="Produto 3">
+			<h3>Controle gamer AeroGrip</h3>
+			<p>Controle ergonômico com gatilhos sensíveis, vibração dual e conectividade via Bluetooth. Ideal para sessões intensas de jogos em diversas plataformas, garantindo conforto e precisão.</p>
+			<p>Preço: R$ 239,90</p>
+			<button onclick="adicionarCarrinho('Produto 3', 99.90)">Adicionar ao Carrinho</button>
+		</div>
+
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Razer_Destructor_2-top_PNr%C2%B00406.jpg" width=20% height=20% alt="Produto 4">
+			<h3>Mousepad gamer VortexSlide</h3>
+			<p>Superfície de microtextura otimizada para sensores ópticos e laser. Base antiderrapante e bordas costuradas para maior durabilidade. Proporciona movimentos rápidos e precisos.</p>
+			<p>Preço: R$ 99,90</p>
+			<button onclick="adicionarCarrinho('Produto 4', 49.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/LG_L194WT-SF_LCD_monitor.jpg" width=20% height=20% alt="Produto 5">
+			<h3>Monitor gamer HyperView 165 hertz</h3>
+			<p>Monitor Full HD com taxa de atualização de 165 Hz e tempo de resposta de 1ms. Ideal para jogos rápidos e competitivos, garantindo imagens suaves e sem rasgos de tela.</p>
+			<p>Preço: R$ 498,90</p>
+			<button onclick="adicionarCarrinho('Produto 5', 79.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Oculus-Rift-CV1-Headset-Back.jpg" width=20% height=20% alt="Produto 6">
+			<h3>Óculos de realidade virtual InfinityVision</h3>
+			<p>Óculos VR com resolução 4K por olho e campo de visão de 110°. Compatível com múltiplas plataformas e sensores de movimento de 6 eixos para uma experiência de imersão total.</p>
+			<p>Preço: R$ 599,99</p>
+			<button onclick="adicionarCarrinho('Produto 6', 99.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Sony-WH-1000XM3-kabellose-Bluetooth-Noise-Cancelling-Kopfhoerer.4.jpg" width=20% height=20% alt="Produto 7">
+			<h3>Fones de ouvido gamer RogueBeat</h3>
+			<p>Fones de ouvido com drivers de 50mm, som surround 7.1 e cancelamento de ruído ativo. Confortáveis para longas sessões de uso com áudio cristalino e potente.</p>
+			<p>Preço: R$ 199,99</p>
+			<button onclick="adicionarCarrinho('Produto 7', 59.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Average_Webcam.png"width=15% height=15% alt="Produto 8">
+			<h3>Webcam CrystalCam</h3>
+			<p>Webcam com resolução Full HD 1080p, ideal para streaming e videochamadas, contém microfone embutido com cancelamento de ruído.</p>
+			<p>Preço: R$ 49,90</p>
+			<button onclick="adicionarCarrinho('Produto 8', 49.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/8/86/ROCCAT_Ryos_MK-FX_DE_Top_equalizer_whiteBG.jpg" width=20% height=20% alt="Produto 9">
+			<h3>Teclado gamer StrikeBoard</h3>
+			<p>Teclado mecânico com switches Cherry MX, retroiluminação RGB e 5 teclas programáveis. Projetado para durabilidade e desempenho em jogos intensos.</p>
+			<p>Preço: R$ 179,99</p>
+			<button onclick="adicionarCarrinho('Produto 9', 79.90)">Adicionar ao Carrinho</button>
+		</div>
+		<div class="produto">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/PS4-Headset.jpg" width=20% height=20% alt="Produto 10">
+			<h3>Fone de ouvido gamer PulseCore</h3>
+			<p>Fone de ouvido com som surround 7.1, microfone removível e almofadas confortáveis. Perfeito para comunicação clara e áudio imersivo em jogos.</p>
+			<p>Preço: R$ 99,90</p>
+			<button onclick="adicionarCarrinho('Produto 10', 99.90)">Adicionar ao Carrinho</button>
+    </div>
+</section>
+
+
+    <!-- Section des produits acheté -->
+    <section id="carrinho" class="tab-content">
+        <h2>Seu Carrinho</h2>
+        <ul id="lista-carrinho">
+            <!-- Itens do carrinho serão exibidos aqui -->
+        </ul>
+        <p id="total">Total: R$ 0,00</p>
+        <button onclick="limparCarrinho()">Limpar Carrinho</button>
+        <button>Finalizar compra</button>
+
+    </section>
+
+    <!-- Section de contact -->
+    <section id="contato" class="tab-content">
+        <h2>Contato</h2>
+        <form action="enviar_pedido.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar Pedido</button>
+
+            <p>Pour toute question, contactez-nous : <button onclick="window.location.href='mailto:pellegrinomaxime3@gmail.com';">Envoyer un email</button></p>
+        </form>
+    </section>
+
+    <!-- Section des producteurs -->
+    <section id="donos" class="tab-content">
+        <h2>Conheça os Fundadores</h2>
+        <div class="dono">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Alfredo_Romano_Jr.jpg"width=15% height=15% alt="Ryan Zidane">
+            <h3>Ryan Zidane</h3>
+            <p>Entusiasta da tecnologia e comércio eletrônico, Ryan é o visionário por trás do conceito inovador da loja.</p>
+        </div>
+        <div class="dono">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Jon_Brod%2C_Technology_Entrepreneur.jpg"width=15% height=15% alt="Maxime Pellegrino">
+            <h3>Maxime Pellegrino</h3>
+            <p>Especialista em design, Maxime é responsável pela experiência do usuário e o visual moderno da loja.</p>
+        </div>
+        <div class="dono">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Arturo_Lopez_Valerio_Bohio_206_transparent.png"width=10% height=10% alt="Breno Martins">
+            <h3>Breno Martins</h3>
+            <p>Gestor financeiro com foco em crescimento sustentável e sucesso a longo prazo.</p>
+        </div>
+    </section>
+
+	<script>
+		function opaTab(event, tabId) {
+            const tabContent = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContent.length; i++) {
+                tabContent[i].classList.remove('active');
+            }
+
+            const tabLinks = document.getElementsByClassName('tab-link');
+            for (let i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].classList.remove('active');
+            }
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        let carrinho = [];
+        let total = 0;
+
+        function adicionarCarrinho(nome, preco) {
+            carrinho.push({ nome, preco });
+            total += preco;
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            const listaCarrinho = document.getElementById('lista-carrinho');
+            listaCarrinho.innerHTML = '';
+            carrinho.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
+                listaCarrinho.appendChild(li);
+            });
+            document.getElementById('total').textContent = `Total: R$ ${total.toFixed(2)}`;
+        }
+
+        function limparCarrinho() {
+            carrinho = [];
+            total = 0;
+            atualizarCarrinho();
+        }
+    </script>
+</body>
+</html>
