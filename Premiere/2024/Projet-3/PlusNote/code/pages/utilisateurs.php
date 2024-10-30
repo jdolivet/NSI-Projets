@@ -28,15 +28,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         // Paramètres du serveur SMTP
         $mail->isSMTP();
-        $mail->Host       = 'smtp.mascarotour.com.br'; // Adresse du serveur SMTP
+        $mail->Host       = ''; // Adresse du serveur SMTP
         $mail->SMTPAuth   = true;                   
-        $mail->Username   = 'plusnote@mascarotour.com.br'; // email SMTP
-        $mail->Password   = 'QgUFJyqCN2qCqSp36Lzs';             // mot de passe SMTP
+        $mail->Username   = ''; // email SMTP
+        $mail->Password   = '';             // mot de passe SMTP
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Utilisation du chiffrement TLS ou SSL
         $mail->Port       = 587;                    // Port SMTP
 
         // Définit l'expéditeur et les destinataires
-        $mail->setFrom('plusnote@mascarotour.com.br', 'PlusNote');
+        $mail->setFrom('', '');
         $mail->addAddress("$email", "$nome $sobrenome");
 
         // Contenu de l'email
