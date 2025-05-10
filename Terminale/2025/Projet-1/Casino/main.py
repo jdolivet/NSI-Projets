@@ -3,7 +3,6 @@
 # On importe les modules randint et pyxel pour faire la partie visuelle
 import pyxel as px
 from random import randint
-import time
 
 # Taille définit pour la fenêtre (pris dans le site PYXEL vue en classe)
 # Taille de la fenetre 128x128 pixels
@@ -71,7 +70,9 @@ def tirage_avec_suspense(index):
         px.cls(0)
         draw() # Appelle la function draw pour faire les dessins
         px.flip()
-        time.sleep(0.1) # Temps de suspense
+        l = 0
+        for _ in range(1_000_000): # Temps de suspense sans le module time
+            l += 1
     cases[index]["val"] = randint(1, 7) # Autre tirage des valeurs
 
 # Quelques combinaisons possibles et leurs valeurs
