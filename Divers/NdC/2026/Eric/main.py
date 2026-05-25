@@ -10,7 +10,8 @@ START_X = -1
 START_Y = GRID_SIZE - 1
 TILE_BORDER_COLOR = 0
 TOWER_COST = 10
-TOWER_FIX_COST = 15
+TOWER_FIX_COST = 8
+GUARDIAN_FIX_COST = 30
 BOSS_BASE_LIFE = 175
 WAVE_LEVEL = ["","L'INVASION","ON ACCELERE","CHEMIN DES KAMIKAZES","METEORS","TONNERRE DE ZEUS", "TREMBLEMENT DE TERRE", "- TSUNAMI -"]
 
@@ -276,8 +277,10 @@ class EnemyBullet:
 
 class App:
     def __init__(self):
-        pyxel.init(256, 256, title="NdC Towers Defense")
+        pyxel.init(256, 256, title="NdC Tower Defense")
+        pyxel.fullscreen(True)
         pyxel.colors[8] = 0xE71818 # Rouge
+        self.game_started = False
         self.setup_sounds()
         self.sound_enabled = True
         self.high_scores = [0, 0, 0]
@@ -288,7 +291,7 @@ class App:
         self.wave_rain = 5
         self.wave_fog = 3
         self.wave_kamikaze = 3
-        self.wave_boss = 10
+        self.wave_boss = 9
         self.reset_game()
         self.game_frame_count = 0
         self.first_rain_delay = 30 * 30  # 30s em frames
@@ -513,9 +516,11 @@ class App:
                     if (next_x, next_y) in tower_coords:
                         valid_stretch = False
                         break
-                    if self.grid and self.grid[next_y][next_x] and self.grid[next_y][next_x].kind == "hole":
-                        valid_stretch = False
-                        break
+                    # 1er chemin, pas de trou,
+                    # deuxieme cheminm trou = pont
+                    #if self.grid and self.grid[next_y][next_x] and self.grid[next_y][next_x].kind == "hole":
+                    #    valid_stretch = False
+                    #    break
                     if (next_x, next_y) not in p:
                         temp_coords.append((next_x, next_y))
                 # Tout ok, on valide
@@ -572,19 +577,37 @@ class App:
         else:
             self.two_path = True
             start_y2 = pyxel.rndi(GRID_SIZE // 2, GRID_SIZE - 3)
-            path2 = create_path(0, start_y2, avoid_towers=True)
+            path2 = create_path(0, start_y2, avoid_towers=False)
             self.all_paths = [self.path1, path2] 
             for (gx, gy) in set(path2):
                 tile = self.grid[gy][gx]
-                if tile.kind != "hole":
-                    tile.h = 2
-                    if (gx, gy) in self.river_path:
-                        tile.bridge = True
-                        tile.kind = "bridge"
-                    else:
-                        tile.kind = "path"
-
+                tile.h = 2
+                if (gx, gy) in self.river_path:
+                    tile.bridge = True
+                    tile.kind = "bridge"
+                elif tile.kind == "hole":
+                    tile.kind = "bridge"
+                else:
+                    tile.kind = "path"
+                
     def update(self):
+        if not self.game_started:
+            if pyxel.btn(pyxel.KEY_SPACE):
+                self.game_started = True
+            return
+            
+        if self.game_started:
+        # Caméra
+            if pyxel.btn(pyxel.KEY_LEFT): self.cam_x += 4
+            if pyxel.btn(pyxel.KEY_RIGHT): self.cam_x -= 4
+            edge_margin = 10
+            scroll_speed = 4
+            if pyxel.mouse_x < edge_margin:
+                self.cam_x += scroll_speed
+            elif pyxel.mouse_x > pyxel.width - edge_margin:
+                self.cam_x -= scroll_speed
+                
+                
         self.game_frame_count += 1 
         # Brume - Bruit de perlin (Merci internet!)
         if self.wave >= self.wave_fog:
@@ -617,24 +640,21 @@ class App:
             pyxel.play(3, 3)
             return
         
-        # Caméra
-        if pyxel.btn(pyxel.KEY_LEFT): self.cam_x += 4
-        if pyxel.btn(pyxel.KEY_RIGHT): self.cam_x -= 4
-        edge_margin = 10
-        scroll_speed = 4
-        if pyxel.mouse_x < edge_margin:
-            self.cam_x += scroll_speed
-        elif pyxel.mouse_x > pyxel.width - edge_margin:
-            self.cam_x -= scroll_speed
+        
         # Réparation   
         if pyxel.btnp(pyxel.MOUSE_BUTTON_RIGHT) and self.hover_tile:
             for t in self.towers:
                 if t.tile == self.hover_tile:
-                    if self.money >= 15:
+                    if self.money >= TOWER_FIX_COST and not t.is_guardian:
                         t.max_hp += 5
                         t.hp = t.max_hp
                         t.range += 0.5
-                        self.money -= 15
+                        self.money -= TOWER_FIX_COST
+                    if self.money >= GUARDIAN_FIX_COST and t.is_guardian:
+                        t.max_hp += 5
+                        t.hp = t.max_hp
+                        t.range += 0.5
+                        self.money -= GUARDIAN_FIX_COST
                         
         # Limites da Câmera (Opcional, para não fugir do mapa)
         self.cam_x = max(-70, min(70, self.cam_x))
@@ -789,6 +809,12 @@ class App:
         self.enemies = [e for e in self.enemies if not e.dead]
         
         for t in self.towers:
+            if t.tile.kind == "path":
+                t.dead = True
+                tx, ty = t.tile.x, t.tile.y
+                pyxel.play(2, 3)
+                for _ in range(15):
+                    self.particles.append(ExplosionPixel(tx, ty, t.tile.h + 1))
             t.update(self.enemies, self.bullets)
         self.towers = [t for t in self.towers if not t.dead]
         
@@ -896,46 +922,98 @@ class App:
             pyxel.camera(0, 0)
 
         pyxel.cls(0)
-        pyxel.fullscreen(True)
         for y in range(GRID_SIZE):
             for x in range(GRID_SIZE):
                 if self.grid and y < len(self.grid) and x < len(self.grid[y]) and self.grid[y][x] is not None:
                     self.draw_block(self.grid[y][x])
         
-        if self.hover_tile and not self.game_over:
-            tx, ty = self.iso_center(self.hover_tile)
-            is_occ = any(tw.tile == self.hover_tile for tw in self.towers)
-            is_inv = self.hover_tile.kind in ["path", "water", "bridge", "wall", "exit", "hole"]
-            hover_color = 7 if (self.money >= TOWER_COST and not is_occ and not is_inv) else 8
-            pyxel.line(tx-7, ty, tx, ty-3, hover_color)
-            pyxel.line(tx, ty-3, tx+7, ty, hover_color)
-            pyxel.line(tx+7, ty, tx, ty+3, hover_color)
-            pyxel.line(tx, ty+3, tx-7, ty, hover_color)
+        # Présentation
+        if not self.game_started:
+            msg1 = "TOWER DEFENSE"
+            msg2 = "PROTEGEZ VOS GARDIENS DE L'ATTAQUE ENNEMIE"
+            msg3 = "FAITES ATTENTION A VOTRE ARGENT"
+            msg4 = "ET NE FAITES PAS CONFIANCE A LA NATURE"
+            msg5 = "SURVIVRE N'EST PAS UNE OPTION"
+            msg6 = "BOUTON GAUCHE DE LA SOURIS POUR PLACER VOS TOURS ($10)"
+            msg7 = "BOUTON DROIT DE LA SOURIS POUR REPARER VOS TOURS ($10)"
+            msg8 = "DEPLACAMENT DE LA CARTE AVES LA SOURIS"
+            msg9 = "OU LES FLECHES GAUCHE/DROITE"
+            msg10 = "PRESSEZ [ESPACE] POUR COMMENCER"
+            msg_max_size = self.text_pos(msg7)
+            margin = 26
+            msg_x = pyxel.width // 2 - (msg_max_size * 9)// 2 -  margin
+            msg_w = msg_max_size * 9 + 2 * margin
+            msg_y = pyxel.height // 3  - 1.5 * margin
+            msg_h = 146
+            pyxel.line(msg_x + 1 , msg_y + msg_h, msg_x + msg_w, msg_y + msg_h, 1)
+            pyxel.line(msg_x + msg_w , msg_y + 1, msg_x + msg_w, msg_y + msg_h , 1)
+            pyxel.rect(msg_x, msg_y, msg_w, msg_h, 0)
+            pyxel.rectb(msg_x, msg_y, msg_w, msg_h, 9)
+            pyxel.text(self.text_pos(msg1) +1 , msg_y + 12, msg1, 1)
+            pyxel.text(self.text_pos(msg1),msg_y + 11, msg1, 8)
+            pyxel.text(self.text_pos(msg2) + 1 , msg_y + 30, msg2, 7)
+            pyxel.text(self.text_pos(msg3), msg_y + 38, msg3, 10)
+            pyxel.text(self.text_pos(msg4), msg_y + 46, msg4, 11)
+            pyxel.text(self.text_pos(msg5), msg_y + 58, msg5, 8)
+            pyxel.text(self.text_pos(msg6), msg_y + 80, msg6, 5)
+            pyxel.text(self.text_pos(msg7), msg_y + 88, msg7, 5)
+            pyxel.text(self.text_pos(msg8), msg_y + 100, msg8, 5)
+            pyxel.text(self.text_pos(msg9), msg_y + 108, msg9, 5)
+            if pyxel.frame_count % 30 < 15:
+                pyxel.text(self.text_pos(msg10), msg_y + 130, msg10, 7)
+            return
         
-        # Ellipse
+        if not self.game_over:
+            if self.hover_tile:
+                pyxel.mouse(False)
+                tx, ty = self.iso_center(self.hover_tile)
+                is_occ = any(tw.tile == self.hover_tile for tw in self.towers)
+                is_inv = self.hover_tile.kind in ["path", "water", "bridge", "wall", "exit", "hole"]
+                hover_color = 7 if (self.money >= TOWER_COST and not is_occ and not is_inv) else 8
+                pyxel.line(tx-7, ty, tx, ty-3, hover_color)
+                pyxel.line(tx, ty-3, tx+7, ty, hover_color)
+                pyxel.line(tx+7, ty, tx, ty+3, hover_color)
+                pyxel.line(tx, ty+3, tx-7, ty, hover_color)
+            else:
+                pyxel.mouse(True)
+            
+        # Ellipse 
         if self.hover_tile and not self.game_over:
-            for t in self.towers:
-                if t.tile == self.hover_tile:
-                    tx, ty = self.iso_center(t.tile)
-                    bonus_altura = max(0, (t.tile.h - 1) * 0.5)
-                    alcance_total = t.range + bonus_altura
-                    rx = alcance_total * (BLOCK_SIZE // 2)
-                    ry = rx / 2
-                    steps = 32
-                    for i in range(steps):
-                        angle1 = i * 360 / steps
-                        angle2 = (i + 1) * 360 / steps
-                        x1 = tx + pyxel.cos(angle1) * rx
-                        y1 = ty + pyxel.sin(angle1) * ry
-                        x2 = tx + pyxel.cos(angle2) * rx
-                        y2 = ty + pyxel.sin(angle2) * ry
-                        pyxel.line(x1, y1, x2, y2, 7)
-                    break
+            current_tower = next((tw for tw in self.towers if tw in self.towers if tw.tile == self.hover_tile), None)
+            if current_tower:
+                # Tour existe déjà
+                bonus_altura = max(0, (current_tower.tile.h - 1) * 0.5)
+                alcance_total = current_tower.range + bonus_altura
+                ellipse_color = 7 
+                show_ellipse = True
+            elif self.hover_tile.kind not in ["path", "water", "bridge", "wall", "exit", "hole"] and self.money >= TOWER_COST:
+                # On peut mettre une tour donc on montre aussi l'ellipse 
+                temp_tower = Tower(self.hover_tile, kind=self.next_tower_kind)
+                bonus_altura = max(0, (self.hover_tile.h - 1) * 0.5)
+                alcance_total = temp_tower.range + bonus_altura
+                ellipse_color = 13
+                show_ellipse = True
+            else:
+                show_ellipse = False
+
+            if show_ellipse:
+                tx, ty = self.iso_center(self.hover_tile)
+                rx = alcance_total * (BLOCK_SIZE // 2)
+                ry = rx / 2
+                steps = 32
+                for i in range(steps):
+                    angle1 = i * 360 / steps
+                    angle2 = (i + 1) * 360 / steps
+                    x1 = tx + pyxel.cos(angle1) * rx
+                    y1 = ty + pyxel.sin(angle1) * ry
+                    x2 = tx + pyxel.cos(angle2) * rx
+                    y2 = ty + pyxel.sin(angle2) * ry
+                    pyxel.line(x1, y1, x2, y2, ellipse_color)
                 
         # icone réparation souris
         if self.hover_tile:
             for t in self.towers:
-                if t.tile == self.hover_tile and t.hp < t.max_hp and self.money >= TOWER_FIX_COST:
+                if t.tile == self.hover_tile and t.hp < t.max_hp and ((self.money >= TOWER_FIX_COST and not t.is_guardian) or (self.money >= GUARDIAN_FIX_COST and t.is_guardian)):
                     mx, my = pyxel.mouse_x, pyxel.mouse_y
                     ix, iy = mx + 12, my - 14
                     pyxel.circ(ix + 4, iy + 8, 4, 7)
@@ -1093,7 +1171,7 @@ class App:
         pyxel.text(x_inimigos + 15, base_hud_y + 34, "Tank", 7)
         self.draw_hud_enemy(from_border + 6, base_hud_y + 44, "kamikaze")
         pyxel.text(x_inimigos + 15, base_hud_y + 47, "Kamikaze", 7)
-
+        
         base_wave_name = 30
         if self.wave == (self.next_tsunami_wave - 1) and getattr(self, 'tsunami_alert_timer', 0) > 0:
             if pyxel.frame_count % 20 < 10:
@@ -1108,8 +1186,9 @@ class App:
             pyxel.text(self.text_pos(wave_n), base_wave_name, wave_n, 12)
         elif is_boss_wave:
             # Texte clignotant rouge et blanc pour le côté dramatique
+            wave_n = "- The BOSS -"
             boss_color = 8 if (pyxel.frame_count // 10) % 2 == 0 else 7
-            pyxel.text(30, base_wave_name + 10, "- The BOSS -", boss_color)
+            pyxel.text(self.text_pos(wave_n), base_wave_name + 10, "- The BOSS -", boss_color)
             level_name = WAVE_LEVEL[self.wave] if self.wave < len(WAVE_LEVEL) else ""
             if level_name:
                 wave_n = level_name
@@ -1131,6 +1210,7 @@ class App:
             c = 10 if self.score == s and self.score > 0 else 5
             pyxel.text(5, 30 + i * 8, f"{i+1}. {s:05}", c)
  
+         
         if self.game_over:
             self.apply_rain_palette(False)
             msg1 = "CHUTE DES GUARDIENS"
