@@ -18,4 +18,5 @@ Pour vous déplacer, vous devez appuyer sur les touches multidirectionnelles, é
 Vous gagnez le jeu une fois que vous arrivez au drapeau bien que vos rêves continuent.  
 Si vous aimez de la bonne musique, écoutez celle de ce jeu !!!!!!
 
-
+Lien vers le jeu en ligne : 
+[https://jdolivet.github.io/NSI-Projets/Divers/NdC/2026/Python-Première/LIFSP_2026_25/index.html](https://jdolivet.github.io/NSI-Projets/Divers/NdC/2026/Python-Première/LIFSP_2026_25/index.html)
